@@ -22,7 +22,7 @@ def _contents(messages: list[Message]) -> list[dict[str, Any]]:
                     "parts": [
                         {
                             "function_response": {
-                                "name": message.tool_call_id or "tool_result",
+                                "name": message.tool_name or "tool_result",
                                 "response": {"result": message.content},
                             }
                         }

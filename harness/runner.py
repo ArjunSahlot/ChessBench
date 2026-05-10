@@ -52,7 +52,7 @@ class GenerationRunner:
                 for call in response.tool_calls:
                     result = execute_tool(self.workspace, call)
                     compile_ok = compile_ok or (result.name == "compile_engine" and result.ok)
-                    messages.append(Message("tool", result.content, tool_call_id=call.id))
+                    messages.append(Message("tool", result.content, tool_call_id=call.id, tool_name=result.name))
                     self._record("tool", {"turn": turn, "call": call, "result": result})
 
                 if compile_ok:
