@@ -16,13 +16,20 @@ class GameRunner:
         self.store = store
         self.config = config
 
-    def play(self, white: Engine, black: Engine, time_control: TimeControl, opening: Opening | None = None) -> str:
+    def play(
+        self,
+        white: Engine,
+        black: Engine,
+        time_control: TimeControl,
+        opening: Opening | None = None,
+        opening_skip_reason: str = "",
+    ) -> str:
         game_id = uuid.uuid4().hex
         board = chess.Board()
         opening_moves = list(opening.moves) if opening is not None else []
         for move_text in opening_moves:
             board.push(chess.Move.from_uci(move_text))
-        self.store.create_game(game_id, white, black, self.config, time_control, opening, board.fen())
+        self.store.create_game(game_id, white, black, self.config, time_control, opening, board.fen(), opening_skip_reason)
         self.store.start_game(game_id)
 
         pgn_game = chess.pgn.Game()
@@ -34,6 +41,8 @@ class GameRunner:
             pgn_game.setup(board)
             pgn_game.headers["Opening"] = opening.label
             pgn_game.headers["OpeningSource"] = opening.source
+        elif opening_skip_reason:
+            pgn_game.headers["OpeningSkipped"] = opening_skip_reason
         node = pgn_game
         clocks = {chess.WHITE: time_control.init_ms, chess.BLACK: time_control.init_ms}
 

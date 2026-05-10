@@ -54,4 +54,6 @@ uv run llm-chess compete --forever \
 
 Openings are randomized from `competition/openings.txt` by default. Each non-empty line is a space-separated UCI move sequence, and the selected opening line, source, and resulting FEN are persisted with the game. Use `--openings-file path/to/book.txt` to swap books or `--no-openings` to disable this.
 
+Before an engine receives opening positions, the runner probes whether it can return a legal move from a non-start FEN. Engines that fail still play in the round robin, but from startpos only; the skip reason is stored in SQLite and PGN as `OpeningSkipped`.
+
 Use `--max-plies`, `--handshake-timeout-seconds`, and `--move-timeout-seconds` to keep malformed generated engines from blocking the loop.

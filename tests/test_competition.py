@@ -15,31 +15,38 @@ import chess
 import sys
 
 MOVES = {moves!r}
+SUPPORTS_FEN = {supports_fen!r}
 ply = 0
+board = chess.Board()
 
 for raw in sys.stdin:
     line = raw.strip()
     if line.startswith("position startpos"):
         parts = line.split()
+        board = chess.Board()
+        if "moves" in parts:
+            for move_text in parts[parts.index("moves") + 1:]:
+                board.push(chess.Move.from_uci(move_text))
         ply = max(0, len(parts) - parts.index("moves") - 1) if "moves" in parts else 0
-    elif line.startswith("position fen "):
-        ply = chess.Board(line.removeprefix("position fen ")).ply()
+    elif SUPPORTS_FEN and line.startswith("position fen "):
+        board = chess.Board(line.removeprefix("position fen "))
+        ply = board.ply()
     if line == "uci":
         print("id name fake", flush=True)
         print("uciok", flush=True)
     elif line == "isready":
         print("readyok", flush=True)
     elif line.startswith("go"):
-        move = MOVES[ply] if ply < len(MOVES) else "0000"
+        move = MOVES[ply] if ply < len(MOVES) else next(iter(board.legal_moves), chess.Move.null()).uci()
         print(f"bestmove {{move}}", flush=True)
     elif line == "quit":
         break
 """
 
 
-def write_engine(path: Path, moves: list[str]) -> None:
+def write_engine(path: Path, moves: list[str], supports_fen: bool = True) -> None:
     path.parent.mkdir(parents=True)
-    path.write_text(ENGINE_SCRIPT.format(python=sys.executable, moves=moves), encoding="utf-8")
+    path.write_text(ENGINE_SCRIPT.format(python=sys.executable, moves=moves, supports_fen=supports_fen), encoding="utf-8")
     path.chmod(0o755)
     (path.parent / "manifest.json").write_text('{"compile_ok": true}\n', encoding="utf-8")
 
@@ -111,5 +118,33 @@ def test_competition_cycles_time_controls_and_persists_opening(tmp_path) -> None
         assert "Opening" in rows[0][3]
         assert "FEN" in rows[0][3]
         assert "2. Nf3" in rows[0][3]
+    finally:
+        db.close()
+
+
+def test_competition_skips_openings_for_engines_that_ignore_fen(tmp_path) -> None:
+    line = ["e2e4", "e7e5", "g1f3", "b8c6"]
+    write_engine(tmp_path / "a" / "v1" / "engine", line)
+    write_engine(tmp_path / "b" / "v1" / "engine", line, supports_fen=False)
+    openings = tmp_path / "openings.txt"
+    openings.write_text("d2d4 g8f6 f2f3\n", encoding="utf-8")
+    db_path = tmp_path / "results.sqlite3"
+
+    played = CompetitionRunner(
+        generations_root=tmp_path,
+        results_db=db_path,
+        time_control=TimeControl(movetime_ms=1),
+        openings_file=openings,
+        max_plies=4,
+    ).run(max_games=1, forever=False)
+
+    assert played == 1
+    db = sqlite3.connect(db_path)
+    try:
+        row = db.execute("SELECT opening_moves, opening_skip_reason, pgn FROM games").fetchone()
+        assert row[0] == ""
+        assert "probe returned illegal move" in row[1]
+        assert "OpeningSkipped" in row[2]
+        assert db.execute("SELECT COUNT(*) FROM engine_capabilities").fetchone()[0] == 2
     finally:
         db.close()

@@ -107,6 +107,13 @@ class CompetitionStore:
                 updated_at TEXT NOT NULL,
                 FOREIGN KEY (engine_id) REFERENCES engines(engine_id)
             );
+            CREATE TABLE IF NOT EXISTS engine_capabilities (
+                engine_id TEXT PRIMARY KEY,
+                supports_openings INTEGER NOT NULL,
+                reason TEXT NOT NULL,
+                checked_at TEXT NOT NULL,
+                FOREIGN KEY (engine_id) REFERENCES engines(engine_id)
+            );
             CREATE INDEX IF NOT EXISTS idx_games_pair ON games(white_engine_id, black_engine_id, status);
             CREATE INDEX IF NOT EXISTS idx_moves_game ON moves(game_id, ply);
             CREATE INDEX IF NOT EXISTS idx_uci_game ON uci_events(game_id);
@@ -116,6 +123,7 @@ class CompetitionStore:
             self._add_column("games", "opening_moves", "TEXT")
             self._add_column("games", "opening_fen", "TEXT")
             self._add_column("games", "opening_source", "TEXT")
+            self._add_column("games", "opening_skip_reason", "TEXT")
             self.db.commit()
 
     def _add_column(self, table: str, name: str, kind: str) -> None:
@@ -161,15 +169,16 @@ class CompetitionStore:
         time_control: TimeControl,
         opening: Opening | None,
         opening_fen: str,
+        opening_skip_reason: str = "",
     ) -> None:
         with self.lock:
             self.db.execute(
             """
             INSERT INTO games(
                 game_id, white_engine_id, black_engine_id, scheduled_at, status, config_json,
-                time_control_json, opening_moves, opening_fen, opening_source, white_clock_ms, black_clock_ms
+                time_control_json, opening_moves, opening_fen, opening_source, opening_skip_reason, white_clock_ms, black_clock_ms
             )
-            VALUES (?, ?, ?, ?, 'scheduled', ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, 'scheduled', ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 game_id,
@@ -181,6 +190,7 @@ class CompetitionStore:
                 opening.label if opening is not None else "",
                 opening_fen,
                 opening.source if opening is not None else "",
+                opening_skip_reason,
                 time_control.init_ms,
                 time_control.init_ms,
             ),
@@ -264,6 +274,31 @@ class CompetitionStore:
     def game_count(self) -> int:
         with self.lock:
             return int(self.db.execute("SELECT COUNT(*) FROM games").fetchone()[0])
+
+    def get_opening_capability(self, engine_id: str) -> tuple[bool, str] | None:
+        with self.lock:
+            row = self.db.execute(
+                "SELECT supports_openings, reason FROM engine_capabilities WHERE engine_id=?",
+                (engine_id,),
+            ).fetchone()
+        if row is None:
+            return None
+        return bool(row["supports_openings"]), row["reason"]
+
+    def set_opening_capability(self, engine_id: str, supports_openings: bool, reason: str) -> None:
+        with self.lock:
+            self.db.execute(
+                """
+                INSERT INTO engine_capabilities(engine_id, supports_openings, reason, checked_at)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(engine_id) DO UPDATE SET
+                    supports_openings=excluded.supports_openings,
+                    reason=excluded.reason,
+                    checked_at=excluded.checked_at
+                """,
+                (engine_id, int(supports_openings), reason, now_iso()),
+            )
+            self.db.commit()
 
     def _rebuild_standings(self) -> None:
         self.db.execute("DELETE FROM standings")
