@@ -1,0 +1,28 @@
+{
+  "name": "web-chess-gui",
+  "version": "1.0.0",
+  "description": "Elegant web viewer for LLM chess engine round-robin games.",
+  "type": "module",
+  "scripts": {
+    "export:data": "python3 scripts/export_competition.py",
+    "dev": "npm run export:data && vite --host 0.0.0.0",
+    "build": "npm run export:data && tsc && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "chess.js": "^1.4.0",
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "typescript": "^6.0.3",
+    "vite": "^5.4.21"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  }
+}
