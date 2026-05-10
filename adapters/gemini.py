@@ -81,7 +81,6 @@ class GeminiAdapter:
             "contents": _contents(messages),
             "config": types.GenerateContentConfig(
                 system_instruction=system,
-                temperature=config.temperature,
                 max_output_tokens=config.max_output_tokens,
                 tools=[types.Tool(function_declarations=[_function_declaration(spec) for spec in tools])],
             ),
