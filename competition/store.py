@@ -117,6 +117,7 @@ class CompetitionStore:
             CREATE INDEX IF NOT EXISTS idx_games_pair ON games(white_engine_id, black_engine_id, status);
             CREATE INDEX IF NOT EXISTS idx_moves_game ON moves(game_id, ply);
             CREATE INDEX IF NOT EXISTS idx_uci_game ON uci_events(game_id);
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_engines_name_unique ON engines(name);
             """
         )
             self._add_column("games", "time_control_json", "TEXT")

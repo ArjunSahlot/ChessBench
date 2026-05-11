@@ -70,6 +70,10 @@ def build_parser() -> argparse.ArgumentParser:
     sync_supabase.add_argument("--dry-run", action="store_true")
     sync_supabase.add_argument("--include-uci", action="store_true", help="Also sync raw UCI event lines.")
 
+    merge_engines = subparsers.add_parser("merge-engines", help="Merge duplicate engine ids so each engine name has one id.")
+    merge_engines.add_argument("--db", type=Path, default=Path("results/competition.sqlite3"))
+    merge_engines.add_argument("--dry-run", action="store_true")
+
     landing_snapshot = subparsers.add_parser("export-landing-snapshot", help="Export the small static benchmark landing snapshot.")
     landing_snapshot.add_argument("--db", type=Path, default=Path("results/competition.sqlite3"))
     landing_snapshot.add_argument("--leaderboard", type=Path, default=Path("results/elo_leaderboard.json"))
@@ -146,6 +150,13 @@ def main() -> int:
         if args.include_uci:
             argv.append("--include-uci")
         return sync_supabase_main(argv)
+    if args.command == "merge-engines":
+        from competition.merge_engines import main as merge_engines_main
+
+        argv = ["--db", str(args.db)]
+        if args.dry_run:
+            argv.append("--dry-run")
+        return merge_engines_main(argv)
     if args.command == "export-landing-snapshot":
         from benchmark.scripts.export_landing_snapshot import main as export_landing_snapshot_main
 

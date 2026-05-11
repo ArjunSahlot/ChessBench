@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -71,5 +70,4 @@ def _find_executable(run_dir: Path) -> Path | None:
 
 
 def _engine_id(provider_model: str, run_id: str) -> str:
-    payload = f"{provider_model}\0{run_id}"
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+    return f"{provider_model}/{run_id}"

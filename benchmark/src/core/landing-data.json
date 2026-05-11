@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T04:02:10.022846+00:00",
+  "generated_at": "2026-05-11T04:18:01.671656+00:00",
   "leaderboard": [
     {
       "accent": "#78c7ff",
@@ -385,7 +385,7 @@
     "generated_engines": 12,
     "latest_finished_at": "2026-05-10T23:30:37.525215+00:00",
     "llm_models": 12,
-    "moves": 82086,
-    "total_games": 3132
+    "moves": 82089,
+    "total_games": 3133
   }
 }
