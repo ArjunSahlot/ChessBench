@@ -1,12 +1,13 @@
+import { EloBar, RecordBadge } from "@/components/LeaderboardVisuals";
 import { ModelMark } from "@/components/ModelMark";
 import { SiteNav } from "@/components/SiteNav";
 import landingData from "@/core/landing-data.json";
-import { formatInteger, formatPercent, resultBreakdown, scoreText } from "@/core/format";
+import { formatInteger } from "@/core/format";
 import type { LandingSnapshot, LeaderboardRow } from "@/core/types";
 
-const rows = (landingData as LandingSnapshot).leaderboard.filter(
-  (row) => row.provider !== "stockfish" && row.provider !== "megalodon",
-) as LeaderboardRow[];
+const rows = (landingData as LandingSnapshot).leaderboard as LeaderboardRow[];
+const minElo = Math.min(...rows.map((row) => row.elo));
+const maxElo = Math.max(...rows.map((row) => row.elo));
 
 export default function LeaderboardPage() {
   return (
@@ -28,21 +29,16 @@ export default function LeaderboardPage() {
             <span>Model</span>
             <span>ELO</span>
             <span>Score</span>
-            <span>Games</span>
             <span>Record</span>
             <span>Avg opponent</span>
           </div>
           {rows.map((row, index) => (
             <div className="leaderboard-table-row" key={row.engine_id}>
-              <span className="rank-cell">{index + 1}</span>
+              <span className="rank-cell">{row.rank ?? index + 1}</span>
               <ModelMark model={row} />
-              <strong>{formatInteger(row.elo)}</strong>
-              <span>
-                <strong>{formatPercent(row.score_pct)}</strong>
-                <small>{scoreText(row)}</small>
-              </span>
-              <span>{formatInteger(row.games)}</span>
-              <span>{resultBreakdown(row)}</span>
+              <EloBar row={row} minElo={minElo} maxElo={maxElo} />
+              <span className="score-points">{row.score.toFixed(1)} / {formatInteger(row.games)}</span>
+              <RecordBadge row={row} />
               <span>{row.avg_opponent_elo ? formatInteger(row.avg_opponent_elo) : "n/a"}</span>
             </div>
           ))}

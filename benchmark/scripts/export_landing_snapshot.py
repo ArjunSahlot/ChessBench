@@ -19,6 +19,15 @@ DEFAULT_DB = ROOT / "results" / "competition.sqlite3"
 DEFAULT_LEADERBOARD = ROOT / "results" / "elo_leaderboard.json"
 DEFAULT_OUTPUT = ROOT / "benchmark" / "src" / "core" / "landing-data.json"
 LLM_EXCLUDED_PROVIDERS = {"stockfish", "megalodon"}
+PROVIDER_META = {
+    "anthropic": {"logo": "/assets/anthropic.svg", "accent": "#d89f72"},
+    "deepseek": {"logo": "/assets/deepseek.svg", "accent": "#6f8dff"},
+    "gemini": {"logo": "/assets/gemini.svg", "accent": "#78c7ff"},
+    "kimi": {"logo": "/assets/kimi.svg", "accent": "#8be7c0"},
+    "megalodon": {"logo": "/assets/megalodon.svg", "accent": "#f3d36b"},
+    "openai": {"logo": "/assets/openai.svg", "accent": "#70e6a4"},
+    "stockfish": {"logo": "/assets/stockfish.svg", "accent": "#78c7ff"},
+}
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -74,10 +83,13 @@ def build_snapshot(db_path: Path, leaderboard_path: Path) -> dict[str, Any]:
 
 def normalize_row(row: dict[str, Any]) -> dict[str, Any]:
     provider = infer_provider(row.get("provider_model"))
+    meta = PROVIDER_META.get(provider, {})
     return {
         **row,
         "provider": provider,
         "model": row.get("provider_model"),
+        "logo": meta.get("logo"),
+        "accent": meta.get("accent"),
     }
 
 

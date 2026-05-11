@@ -2,6 +2,7 @@
   "generated_at": "2026-05-11T03:05:36.242345+00:00",
   "leaderboard": [
     {
+      "accent": "#78c7ff",
       "anchored": true,
       "avg_opponent_elo": 1042,
       "black_games": 260,
@@ -11,6 +12,7 @@
       "elo": 3626,
       "engine_id": "stockfish/example",
       "games": 521,
+      "logo": "/assets/stockfish.svg",
       "loss_pct": 1.2,
       "losses": 6,
       "model": "stockfish",
@@ -27,6 +29,7 @@
       "wins": 499
     },
     {
+      "accent": "#d89f72",
       "anchored": false,
       "avg_opponent_elo": 1163,
       "black_games": 261,
@@ -36,6 +39,7 @@
       "elo": 2024,
       "engine_id": "anthropic-claude-opus-4-7/v1",
       "games": 520,
+      "logo": "/assets/anthropic.svg",
       "loss_pct": 6.9,
       "losses": 36,
       "model": "anthropic-claude-opus-4-7",
@@ -52,6 +56,7 @@
       "wins": 455
     },
     {
+      "accent": "#78c7ff",
       "anchored": false,
       "avg_opponent_elo": 1193,
       "black_games": 262,
@@ -61,6 +66,7 @@
       "elo": 1633,
       "engine_id": "gemini-gemini-3.1-pro-preview/v1",
       "games": 520,
+      "logo": "/assets/gemini.svg",
       "loss_pct": 16.3,
       "losses": 85,
       "model": "gemini-gemini-3.1-pro-preview",
@@ -77,6 +83,7 @@
       "wins": 359
     },
     {
+      "accent": "#78c7ff",
       "anchored": false,
       "avg_opponent_elo": 1199,
       "black_games": 264,
@@ -86,6 +93,7 @@
       "elo": 1586,
       "engine_id": "gemini-gemini-3-flash-preview/v1",
       "games": 521,
+      "logo": "/assets/gemini.svg",
       "loss_pct": 20.0,
       "losses": 104,
       "model": "gemini-gemini-3-flash-preview",
@@ -102,6 +110,7 @@
       "wins": 352
     },
     {
+      "accent": "#70e6a4",
       "anchored": false,
       "avg_opponent_elo": 1207,
       "black_games": 262,
@@ -111,6 +120,7 @@
       "elo": 1440,
       "engine_id": "openai-gpt-5.4/v1",
       "games": 532,
+      "logo": "/assets/openai.svg",
       "loss_pct": 26.9,
       "losses": 143,
       "model": "openai-gpt-5.4",
@@ -127,6 +137,7 @@
       "wins": 303
     },
     {
+      "accent": "#70e6a4",
       "anchored": false,
       "avg_opponent_elo": 1215,
       "black_games": 259,
@@ -136,6 +147,7 @@
       "elo": 1368,
       "engine_id": "openai-gpt-5.5/v1",
       "games": 520,
+      "logo": "/assets/openai.svg",
       "loss_pct": 27.5,
       "losses": 143,
       "model": "openai-gpt-5.5",
@@ -152,6 +164,7 @@
       "wins": 251
     },
     {
+      "accent": "#8be7c0",
       "anchored": false,
       "avg_opponent_elo": 1222,
       "black_games": 262,
@@ -161,6 +174,7 @@
       "elo": 1348,
       "engine_id": "kimi-kimi-k2.6/v1",
       "games": 521,
+      "logo": "/assets/kimi.svg",
       "loss_pct": 32.8,
       "losses": 171,
       "model": "kimi-kimi-k2.6",
@@ -177,6 +191,7 @@
       "wins": 264
     },
     {
+      "accent": "#f3d36b",
       "anchored": true,
       "avg_opponent_elo": 1223,
       "black_games": 233,
@@ -186,6 +201,7 @@
       "elo": 1300,
       "engine_id": "megalodon/example",
       "games": 459,
+      "logo": "/assets/megalodon.svg",
       "loss_pct": 33.6,
       "losses": 154,
       "model": "megalodon",
@@ -202,6 +218,7 @@
       "wins": 239
     },
     {
+      "accent": "#d89f72",
       "anchored": false,
       "avg_opponent_elo": 1244,
       "black_games": 261,
@@ -211,6 +228,7 @@
       "elo": 995,
       "engine_id": "anthropic-claude-sonnet-4-6/v1",
       "games": 521,
+      "logo": "/assets/anthropic.svg",
       "loss_pct": 56.8,
       "losses": 296,
       "model": "anthropic-claude-sonnet-4-6",
@@ -227,6 +245,7 @@
       "wins": 207
     },
     {
+      "accent": "#d89f72",
       "anchored": false,
       "avg_opponent_elo": 1290,
       "black_games": 262,
@@ -236,6 +255,7 @@
       "elo": 456,
       "engine_id": "anthropic-claude-haiku-4-5/v1",
       "games": 521,
+      "logo": "/assets/anthropic.svg",
       "loss_pct": 80.2,
       "losses": 418,
       "model": "anthropic-claude-haiku-4-5",
@@ -252,6 +272,7 @@
       "wins": 103
     },
     {
+      "accent": "#6f8dff",
       "anchored": false,
       "avg_opponent_elo": 1294,
       "black_games": 263,
@@ -261,6 +282,7 @@
       "elo": 434,
       "engine_id": "deepseek-deepseek-v4-pro/v1",
       "games": 523,
+      "logo": "/assets/deepseek.svg",
       "loss_pct": 81.5,
       "losses": 426,
       "model": "deepseek-deepseek-v4-pro",
@@ -277,6 +299,7 @@
       "wins": 97
     },
     {
+      "accent": "#6f8dff",
       "anchored": false,
       "avg_opponent_elo": 1288,
       "black_games": 261,
@@ -286,6 +309,7 @@
       "elo": 418,
       "engine_id": "deepseek-deepseek-v4-flash/v1",
       "games": 520,
+      "logo": "/assets/deepseek.svg",
       "loss_pct": 82.1,
       "losses": 427,
       "model": "deepseek-deepseek-v4-flash",
@@ -302,6 +326,7 @@
       "wins": 93
     },
     {
+      "accent": "#70e6a4",
       "anchored": false,
       "avg_opponent_elo": 1294,
       "black_games": 261,
@@ -311,6 +336,7 @@
       "elo": 405,
       "engine_id": "openai-gpt-5.4-mini/v1",
       "games": 532,
+      "logo": "/assets/openai.svg",
       "loss_pct": 83.1,
       "losses": 442,
       "model": "openai-gpt-5.4-mini",
@@ -327,6 +353,7 @@
       "wins": 90
     },
     {
+      "accent": "#78c7ff",
       "anchored": false,
       "avg_opponent_elo": 1306,
       "black_games": 261,
@@ -336,6 +363,7 @@
       "elo": 199,
       "engine_id": "gemini-gemini-3.1-flash-lite/v1",
       "games": 533,
+      "logo": "/assets/gemini.svg",
       "loss_pct": 93.2,
       "losses": 497,
       "model": "gemini-gemini-3.1-flash-lite",

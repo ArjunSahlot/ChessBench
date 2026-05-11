@@ -368,7 +368,8 @@ p {
 }
 
 .leaderboard-row.professional {
-  grid-template-columns: 34px minmax(190px, 1fr) 76px minmax(210px, 1.05fr);
+  grid-template-columns: 34px minmax(170px, 0.95fr) minmax(170px, 0.95fr) minmax(160px, 0.8fr);
+  min-height: 64px;
 }
 
 .leaderboard-row:hover {
@@ -383,11 +384,36 @@ p {
   text-align: center;
 }
 
-.elo-cell {
+.elo-cell,
+.elo-bar-cell strong {
   color: var(--text);
   font-size: 1.1rem;
   font-weight: 900;
   text-align: right;
+}
+
+.elo-bar-cell {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.elo-bar-cell strong {
+  text-align: left;
+}
+
+.elo-bar-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.elo-bar-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
 }
 
 .score-track {
@@ -420,6 +446,66 @@ p {
 .leaderboard-record strong {
   color: var(--text);
   font-size: 0.98rem;
+}
+
+.record-badge {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.record-topline,
+.record-counts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.record-topline strong {
+  font-size: 0.95rem;
+}
+
+.record-topline small,
+.record-counts {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.record-stack {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.record-stack span {
+  min-width: 2px;
+}
+
+.record-win {
+  background: var(--green);
+}
+
+.record-draw {
+  background: var(--amber);
+}
+
+.record-loss {
+  background: var(--red);
+}
+
+.record-badge.compact {
+  padding: 8px;
+}
+
+.record-badge.compact .record-topline small {
+  display: none;
 }
 
 .full-leaderboard-link {
@@ -872,7 +958,7 @@ p {
 .leaderboard-table-head,
 .leaderboard-table-row {
   display: grid;
-  grid-template-columns: 64px minmax(230px, 1.1fr) 90px minmax(170px, 0.9fr) 90px minmax(190px, 1fr) 120px;
+  grid-template-columns: 64px minmax(250px, 1.05fr) minmax(220px, 1fr) 130px minmax(230px, 1fr) 120px;
   gap: 14px;
   align-items: center;
   padding: 12px 14px;
@@ -888,6 +974,11 @@ p {
 .leaderboard-table-row small {
   display: block;
   color: var(--muted);
+}
+
+.score-points {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .schema-callout {
@@ -1538,11 +1629,13 @@ p {
     grid-area: elo;
   }
 
-  .score-track {
+  .score-track,
+  .elo-bar-cell {
     grid-area: track;
   }
 
-  .mini-record {
+  .mini-record,
+  .record-badge {
     grid-area: record;
   }
 

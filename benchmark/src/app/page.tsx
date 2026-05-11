@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { ArrowRight, BrainCircuit, Code2, Swords, Trophy } from "lucide-react";
 
+import { EloBar, RecordBadge } from "@/components/LeaderboardVisuals";
 import { ModelMark } from "@/components/ModelMark";
 import { SiteNav } from "@/components/SiteNav";
 import landingData from "@/core/landing-data.json";
-import { formatDate, formatInteger, formatPercent, resultBreakdown, scoreText } from "@/core/format";
+import { formatDate, formatInteger } from "@/core/format";
 import type { BenchmarkSummary, LandingSnapshot, LeaderboardRow } from "@/core/types";
 
 const snapshot = landingData as LandingSnapshot;
 const summary = snapshot.summary as BenchmarkSummary;
-const leaderboard = snapshot.leaderboard.filter((row) => row.provider !== "stockfish" && row.provider !== "megalodon").slice(0, 8) as LeaderboardRow[];
+const leaderboard = snapshot.leaderboard.slice(0, 8) as LeaderboardRow[];
+const minElo = Math.min(...snapshot.leaderboard.map((row) => row.elo));
+const maxElo = Math.max(...snapshot.leaderboard.map((row) => row.elo));
 
 export default function HomePage() {
   return (
@@ -35,7 +38,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <div className="hero-stats llm-stats">
-                <Metric icon={<BrainCircuit />} label="LLM entries" value={formatInteger(summary.llm_models)} />
+                <Metric icon={<BrainCircuit />} label="Ply count" value={formatInteger(summary.moves)} />
                 <Metric icon={<Swords />} label="Finished games" value={formatInteger(summary.finished_games)} />
                 <Metric icon={<Code2 />} label="Generated engines" value={formatInteger(summary.generated_engines)} />
               </div>
@@ -59,14 +62,10 @@ export default function HomePage() {
                     href={`/games/?model=${encodeURIComponent(row.engine_id)}`}
                     key={row.engine_id}
                   >
-                    <span className="rank-cell">{index + 1}</span>
+                    <span className="rank-cell">{row.rank ?? index + 1}</span>
                     <ModelMark model={row} />
-                    <span className="elo-cell">{row.elo}</span>
-                    <span className="leaderboard-record">
-                      <strong>{formatPercent(row.score_pct)}</strong>
-                      <small>{scoreText(row)}</small>
-                      <small>{resultBreakdown(row)}</small>
-                    </span>
+                    <EloBar row={row} minElo={minElo} maxElo={maxElo} />
+                    <RecordBadge row={row} compact />
                   </Link>
                 ))}
                 <Link className="full-leaderboard-link" href="/leaderboard/">
