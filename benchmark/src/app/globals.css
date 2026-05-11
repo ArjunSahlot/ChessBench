@@ -1025,6 +1025,11 @@ p {
   color: var(--muted);
 }
 
+.player-panel > div {
+  display: grid;
+  min-width: 0;
+}
+
 .match-score {
   display: grid;
   place-items: center;

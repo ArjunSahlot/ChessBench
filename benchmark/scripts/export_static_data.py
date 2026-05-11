@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sqlite3
 from datetime import UTC, datetime
 from pathlib import Path
@@ -73,7 +74,7 @@ def main() -> None:
             "recent_games": games[:24],
         }
 
-        write_json(args.out / "site.json", site_payload)
+        write_json(args.out / "site.json", site_payload, pretty=True)
         write_json(args.out / "games-index.json", games)
         write_game_details(db, args.out / "games", games[: max(0, args.detail_limit)], raw_to_canonical)
     finally:
@@ -215,7 +216,9 @@ def load_game_summaries(db: sqlite3.Connection, raw_to_canonical: dict[str, str]
         JOIN engines white ON white.engine_id = g.white_engine_id
         JOIN engines black ON black.engine_id = g.black_engine_id
         WHERE g.status != 'ignored'
-        ORDER BY COALESCE(g.finished_at, g.started_at, g.scheduled_at) DESC
+        ORDER BY
+            CASE WHEN g.status = 'finished' THEN 0 ELSE 1 END,
+            COALESCE(g.finished_at, g.started_at, g.scheduled_at) DESC
         """,
     )
 
@@ -389,9 +392,12 @@ def build_rating_bands(leaderboard: list[dict[str, Any]]) -> list[dict[str, Any]
     ]
 
 
-def write_json(path: Path, payload: Any) -> None:
+def write_json(path: Path, payload: Any, pretty: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if pretty:
+        path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    else:
+        path.write_text(json.dumps(payload, separators=(",", ":"), sort_keys=True) + "\n", encoding="utf-8")
 
 
 def compact_json(value: str | None) -> Any:
@@ -417,7 +423,9 @@ def model_label(name: str) -> str:
         if value.startswith(prefix):
             value = value[len(prefix) :]
             break
-    return value.replace("-", " ").replace("gpt ", "GPT-").replace("GPT-5", "GPT-5").title().replace("Gpt", "GPT")
+    value = re.sub(r"(?<=\d)-(?=\d)", ".", value)
+    label = value.replace("-", " ").title()
+    return label.replace("Gpt", "GPT").replace("GPT ", "GPT-").replace("Deepseek", "DeepSeek")
 
 
 def split_moves(value: str | None) -> list[str]:
