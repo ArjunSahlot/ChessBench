@@ -1,0 +1,120 @@
+{
+  "avg_elapsed_ms": 178.0,
+  "black_clock_ms": null,
+  "black_engine_id": "gemini-gemini-3.1-pro-preview/v1",
+  "black_label": "Gemini 3.1 Pro Preview",
+  "black_name": "gemini-gemini-3.1-pro-preview/v1",
+  "black_provider": "gemini",
+  "black_raw_engine_id": "5b4ad6b5fe4afb52",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:16:32.960669+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:16:32.966730+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "55fd7df583c44d8d8868344ab623351d",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:16:22.796068+00:00",
+      "elapsed_ms": 202,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "r1b1k2r/ppppqppp/2N2n2/8/1b1PP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 0 6",
+      "fen_before": "r1b1k2r/ppppqppp/2n2n2/4N3/1b1PP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 1 6",
+      "move_uci": "e5c6",
+      "ply": 11,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:16:22.954836+00:00",
+      "elapsed_ms": 154,
+      "engine_id": "gemini-gemini-3.1-pro-preview/v1",
+      "fen_after": "r1b1k2r/pppp1ppp/2N2n2/8/1b1Pq3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 7",
+      "fen_before": "r1b1k2r/ppppqppp/2N2n2/8/1b1PP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 0 6",
+      "move_uci": "e7e4",
+      "ply": 12,
+      "raw_engine_id": "5b4ad6b5fe4afb52"
+    }
+  ],
+  "opening_fen": "r1b1k2r/ppppqppp/2n2n2/4N3/1b1PP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 1 6",
+  "opening_label": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "g1f3",
+    "b8c6",
+    "b1c3",
+    "g8f6",
+    "d2d4",
+    "f8b4",
+    "f3e5",
+    "d8e7"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1937",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"deepseek-deepseek-v4-pro/v1\"]\n[Black \"gemini-gemini-3.1-pro-preview/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:200\"]\n[FEN \"r1b1k2r/ppppqppp/2n2n2/4N3/1b1PP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 1 6\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 f8b4 f3e5 d8e7\"]\n[OpeningSource \"competition/openings.txt:1937\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n6. Nxc6 Qxe4+ *\n",
+  "plies": 2,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "0-1",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:16:22.355399+00:00",
+  "started_at": "2026-05-11T00:16:22.357005+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "white_label": "Deepseek V4 Pro",
+  "white_name": "deepseek-deepseek-v4-pro/v1",
+  "white_provider": "deepseek",
+  "white_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "winner_engine_id": "gemini-gemini-3.1-pro-preview/v1"
+}

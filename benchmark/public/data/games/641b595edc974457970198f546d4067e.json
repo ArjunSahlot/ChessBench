@@ -1,0 +1,91 @@
+{
+  "avg_elapsed_ms": 100.0,
+  "black_clock_ms": null,
+  "black_engine_id": "gemini-gemini-3.1-flash-lite/v1",
+  "black_label": "Gemini 3.1 Flash Lite",
+  "black_name": "gemini-gemini-3.1-flash-lite/v1",
+  "black_provider": "gemini",
+  "black_raw_engine_id": "3c2155744d3c03dc",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T01:21:33.591438+00:00",
+  "forfeiting_engine_id": "gemini-gemini-3.1-flash-lite/v1",
+  "game_id": "641b595edc974457970198f546d4067e",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:21:33.587109+00:00",
+      "elapsed_ms": 100,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
+      "fen_before": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "move_uci": "g1f3",
+      "ply": 1,
+      "raw_engine_id": "24aef16cc478c0f8"
+    }
+  ],
+  "opening_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "opening_label": "Start position",
+  "opening_moves": [],
+  "opening_skip_reason": "gemini-gemini-3.1-flash-lite/v1: probe returned illegal move e2e4 from non-start FEN",
+  "opening_source": "",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"megalodon/example\"]\n[Black \"gemini-gemini-3.1-flash-lite/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:50\"]\n[OpeningSkipped \"gemini-gemini-3.1-flash-lite/v1: probe returned illegal move e2e4 from non-start FEN\"]\n[Termination \"illegal move e2e4\"]\n\n1. Nf3 1-0\n",
+  "plies": 1,
+  "reason": "illegal move e2e4",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T01:21:33.286271+00:00",
+  "started_at": "2026-05-11T01:21:33.287745+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 50
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "megalodon/example",
+  "white_label": "Megalodon",
+  "white_name": "megalodon/example",
+  "white_provider": "megalodon",
+  "white_raw_engine_id": "24aef16cc478c0f8",
+  "winner_engine_id": "megalodon/example"
+}

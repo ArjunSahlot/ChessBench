@@ -1,0 +1,238 @@
+{
+  "avg_elapsed_ms": 2587.6,
+  "black_clock_ms": 41643,
+  "black_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "black_label": "Claude Haiku 4 5",
+  "black_name": "anthropic-claude-haiku-4-5/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "f6b358e59055ba9b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T00:04:52.102415+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "3d9bf78774aa40b5b355a57ccc45448b",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": 58344,
+      "created_at": "2026-05-11T00:04:15.054073+00:00",
+      "elapsed_ms": 2136,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkbnr/ppppp2p/5pp1/8/7P/2N5/PPPPPPP1/R1BQKBNR w KQkq - 0 3",
+      "fen_before": "rnbqkbnr/pppppp1p/6p1/8/7P/2N5/PPPPPPP1/R1BQKBNR b KQkq - 0 2",
+      "move_uci": "f7f6",
+      "ply": 4,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 58242,
+      "created_at": "2026-05-11T00:04:18.729349+00:00",
+      "elapsed_ms": 2238,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnbqkbnr/ppppp2p/5pp1/8/7P/2N2N2/PPPPPPP1/R1BQKB1R b KQkq - 1 3",
+      "fen_before": "rnbqkbnr/ppppp2p/5pp1/8/7P/2N5/PPPPPPP1/R1BQKBNR w KQkq - 0 3",
+      "move_uci": "g1f3",
+      "ply": 5,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 50639,
+      "created_at": "2026-05-11T00:04:26.917532+00:00",
+      "elapsed_ms": 8185,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkbnr/pppp3p/5pp1/4p3/7P/2N2N2/PPPPPPP1/R1BQKB1R w KQkq - 0 4",
+      "fen_before": "rnbqkbnr/ppppp2p/5pp1/8/7P/2N2N2/PPPPPPP1/R1BQKB1R b KQkq - 1 3",
+      "move_uci": "e7e5",
+      "ply": 6,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 56544,
+      "created_at": "2026-05-11T00:04:29.101453+00:00",
+      "elapsed_ms": 2178,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnbqkbnr/pppp3p/5pp1/4p3/3P3P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 4",
+      "fen_before": "rnbqkbnr/pppp3p/5pp1/4p3/7P/2N2N2/PPPPPPP1/R1BQKB1R w KQkq - 0 4",
+      "move_uci": "d2d4",
+      "ply": 7,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 48073,
+      "created_at": "2026-05-11T00:04:32.156363+00:00",
+      "elapsed_ms": 3046,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkbnr/pp1p3p/2p2pp1/4p3/3P3P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 0 5",
+      "fen_before": "rnbqkbnr/pppp3p/5pp1/4p3/3P3P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 4",
+      "move_uci": "c7c6",
+      "ply": 8,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 54900,
+      "created_at": "2026-05-11T00:04:34.284749+00:00",
+      "elapsed_ms": 2124,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnbqkbnr/pp1p3p/2p2pp1/4P3/7P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 5",
+      "fen_before": "rnbqkbnr/pp1p3p/2p2pp1/4p3/3P3P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 0 5",
+      "move_uci": "d4e5",
+      "ply": 9,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 46230,
+      "created_at": "2026-05-11T00:04:36.614334+00:00",
+      "elapsed_ms": 2323,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkb1r/pp1pn2p/2p2pp1/4P3/7P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 1 6",
+      "fen_before": "rnbqkbnr/pp1p3p/2p2pp1/4P3/7P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 5",
+      "move_uci": "g8e7",
+      "ply": 10,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 53310,
+      "created_at": "2026-05-11T00:04:38.689464+00:00",
+      "elapsed_ms": 2070,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnbqkb1r/pp1pn2p/2p2Pp1/8/7P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 6",
+      "fen_before": "rnbqkb1r/pp1pn2p/2p2pp1/4P3/7P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 1 6",
+      "move_uci": "e5f6",
+      "ply": 11,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 44271,
+      "created_at": "2026-05-11T00:04:41.131055+00:00",
+      "elapsed_ms": 2439,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkb1r/pp1p3p/2p2Pp1/5n2/7P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 1 7",
+      "fen_before": "rnbqkb1r/pp1pn2p/2p2Pp1/8/7P/2N2N2/PPP1PPP1/R1BQKB1R b KQkq - 0 6",
+      "move_uci": "e7f5",
+      "ply": 12,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 51775,
+      "created_at": "2026-05-11T00:04:43.149588+00:00",
+      "elapsed_ms": 2015,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnbqkb1r/pp1p3p/2p2Pp1/5n2/4P2P/2N2N2/PPP2PP1/R1BQKB1R b KQkq - 0 7",
+      "fen_before": "rnbqkb1r/pp1p3p/2p2Pp1/5n2/7P/2N2N2/PPP1PPP1/R1BQKB1R w KQkq - 1 7",
+      "move_uci": "e2e4",
+      "ply": 13,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 42596,
+      "created_at": "2026-05-11T00:04:45.307279+00:00",
+      "elapsed_ms": 2155,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kb1r/pp1p3p/2p2qp1/5n2/4P2P/2N2N2/PPP2PP1/R1BQKB1R w KQkq - 0 8",
+      "fen_before": "rnbqkb1r/pp1p3p/2p2Pp1/5n2/4P2P/2N2N2/PPP2PP1/R1BQKB1R b KQkq - 0 7",
+      "move_uci": "d8f6",
+      "ply": 14,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 50286,
+      "created_at": "2026-05-11T00:04:47.281048+00:00",
+      "elapsed_ms": 1969,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnb1kb1r/pp1p3p/2p2qp1/5P2/7P/2N2N2/PPP2PP1/R1BQKB1R b KQkq - 0 8",
+      "fen_before": "rnb1kb1r/pp1p3p/2p2qp1/5n2/4P2P/2N2N2/PPP2PP1/R1BQKB1R w KQkq - 0 8",
+      "move_uci": "e4f5",
+      "ply": 15,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    },
+    {
+      "clock_ms": 41643,
+      "created_at": "2026-05-11T00:04:48.716963+00:00",
+      "elapsed_ms": 1433,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kb1r/pp1p4/2p2qp1/5P1p/7P/2N2N2/PPP2PP1/R1BQKB1R w KQkq - 0 9",
+      "fen_before": "rnb1kb1r/pp1p3p/2p2qp1/5P2/7P/2N2N2/PPP2PP1/R1BQKB1R b KQkq - 0 8",
+      "move_uci": "h7h5",
+      "ply": 16,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 48851,
+      "created_at": "2026-05-11T00:04:50.635120+00:00",
+      "elapsed_ms": 1915,
+      "engine_id": "openai-gpt-5.4/v1",
+      "fen_after": "rnb1kb1r/pp1p4/2p2qp1/5P1p/7P/2N2N2/PPP1QPP1/R1B1KB1R b KQkq - 1 9",
+      "fen_before": "rnb1kb1r/pp1p4/2p2qp1/5P1p/7P/2N2N2/PPP2PP1/R1BQKB1R w KQkq - 0 9",
+      "move_uci": "d1e2",
+      "ply": 17,
+      "raw_engine_id": "a8dd83f4e9a17d48"
+    }
+  ],
+  "opening_fen": "rnbqkbnr/pppppp1p/6p1/8/7P/2N5/PPPPPPP1/R1BQKBNR b KQkq - 0 2",
+  "opening_label": "b1c3 g7g6 h2h4",
+  "opening_moves": [
+    "b1c3",
+    "g7g6",
+    "h2h4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:22",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"openai-gpt-5.4/v1\"]\n[Black \"anthropic-claude-haiku-4-5/v1\"]\n[Result \"1-0\"]\n[TimeControl \"clock:60000+500\"]\n[FEN \"rnbqkbnr/pppppp1p/6p1/8/7P/2N5/PPPPPPP1/R1BQKBNR b KQkq - 0 2\"]\n[SetUp \"1\"]\n[Opening \"b1c3 g7g6 h2h4\"]\n[OpeningSource \"competition/openings.txt:22\"]\n[Termination \"illegal move b7b6\"]\n\n2... f6 3. Nf3 e5 4. d4 c6 5. dxe5 Ne7 6. exf6 Nf5 7. e4 Qxf6 8. exf5 h5 9. Qe2+ 1-0\n",
+  "plies": 14,
+  "reason": "illegal move b7b6",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T00:04:12.830780+00:00",
+  "started_at": "2026-05-11T00:04:12.831777+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 500,
+    "init_ms": 60000,
+    "move_overhead_ms": 20,
+    "movetime_ms": 100
+  },
+  "white_clock_ms": 48851,
+  "white_engine_id": "openai-gpt-5.4/v1",
+  "white_label": "GPT-5.4",
+  "white_name": "openai-gpt-5.4/v1",
+  "white_provider": "openai",
+  "white_raw_engine_id": "a8dd83f4e9a17d48",
+  "winner_engine_id": "openai-gpt-5.4/v1"
+}

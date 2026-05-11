@@ -1,0 +1,158 @@
+{
+  "avg_elapsed_ms": 2506.8,
+  "black_clock_ms": 60000,
+  "black_engine_id": "openai-gpt-5.5/v1",
+  "black_label": "GPT-5.5",
+  "black_name": "openai-gpt-5.5/v1",
+  "black_provider": "openai",
+  "black_raw_engine_id": "632e3da7a71b792e",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:20:52.971339+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:20:52.977213+00:00",
+  "forfeiting_engine_id": "gemini-gemini-3-flash-preview/v1",
+  "game_id": "a2910d7df862489393f0763d8403140a",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": 58101,
+      "created_at": "2026-05-11T00:20:32.794053+00:00",
+      "elapsed_ms": 2379,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnb2bnr/pppp1k1p/8/4q3/5p2/5Q2/PPPP2PP/RNB2RK1 w - - 0 9",
+      "fen_before": "rnb1kbnr/pppp1B1p/8/4q3/5p2/5Q2/PPPP2PP/RNB2RK1 b kq - 0 8",
+      "move_uci": "e8f7",
+      "ply": 16,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 57715,
+      "created_at": "2026-05-11T00:20:35.563214+00:00",
+      "elapsed_ms": 2765,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "rnb2bnr/pppp1k1p/8/4q3/5Q2/8/PPPP2PP/RNB2RK1 b - - 0 9",
+      "fen_before": "rnb2bnr/pppp1k1p/8/4q3/5p2/5Q2/PPPP2PP/RNB2RK1 w - - 0 9",
+      "move_uci": "f3f4",
+      "ply": 17,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    },
+    {
+      "clock_ms": 56266,
+      "created_at": "2026-05-11T00:20:37.882880+00:00",
+      "elapsed_ms": 2315,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnb2bnr/pppp1k1p/8/8/5q2/8/PPPP2PP/RNB2RK1 w - - 0 10",
+      "fen_before": "rnb2bnr/pppp1k1p/8/4q3/5Q2/8/PPPP2PP/RNB2RK1 b - - 0 9",
+      "move_uci": "e5f4",
+      "ply": 18,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 55380,
+      "created_at": "2026-05-11T00:20:40.701704+00:00",
+      "elapsed_ms": 2815,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "rnb2bnr/pppp1k1p/8/8/5R2/8/PPPP2PP/RNB3K1 b - - 0 10",
+      "fen_before": "rnb2bnr/pppp1k1p/8/8/5q2/8/PPPP2PP/RNB2RK1 w - - 0 10",
+      "move_uci": "f1f4",
+      "ply": 19,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    },
+    {
+      "clock_ms": 54486,
+      "created_at": "2026-05-11T00:20:42.965112+00:00",
+      "elapsed_ms": 2260,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnb2b1r/pppp1k1p/5n2/8/5R2/8/PPPP2PP/RNB3K1 w - - 1 11",
+      "fen_before": "rnb2bnr/pppp1k1p/8/8/5R2/8/PPPP2PP/RNB3K1 b - - 0 10",
+      "move_uci": "g8f6",
+      "ply": 20,
+      "raw_engine_id": "632e3da7a71b792e"
+    }
+  ],
+  "opening_fen": "rnb1kbnr/pppp1B1p/8/4q3/5p2/5Q2/PPPP2PP/RNB2RK1 b kq - 0 8",
+  "opening_label": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "f2f4",
+    "e5f4",
+    "g1f3",
+    "g7g5",
+    "f1c4",
+    "g5g4",
+    "e1g1",
+    "g4f3",
+    "d1f3",
+    "d8f6",
+    "e4e5",
+    "f6e5",
+    "c4f7"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1872",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"gemini-gemini-3-flash-preview/v1\"]\n[Black \"openai-gpt-5.5/v1\"]\n[Result \"*\"]\n[TimeControl \"clock:60000+500\"]\n[FEN \"rnb1kbnr/pppp1B1p/8/4q3/5p2/5Q2/PPPP2PP/RNB2RK1 b kq - 0 8\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 e1g1 g4f3 d1f3 d8f6 e4e5 f6e5 c4f7\"]\n[OpeningSource \"competition/openings.txt:1872\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n8... Kxf7 9. Qxf4+ Qxf4 10. Rxf4+ Nf6 *\n",
+  "plies": 5,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "0-1",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:20:30.229532+00:00",
+  "started_at": "2026-05-11T00:20:30.230327+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 500,
+    "init_ms": 60000,
+    "move_overhead_ms": 20,
+    "movetime_ms": 100
+  },
+  "white_clock_ms": 60000,
+  "white_engine_id": "gemini-gemini-3-flash-preview/v1",
+  "white_label": "Gemini 3 Flash Preview",
+  "white_name": "gemini-gemini-3-flash-preview/v1",
+  "white_provider": "gemini",
+  "white_raw_engine_id": "d2b7107ab9d96a9a",
+  "winner_engine_id": "openai-gpt-5.5/v1"
+}

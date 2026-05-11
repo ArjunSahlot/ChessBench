@@ -1,0 +1,117 @@
+{
+  "avg_elapsed_ms": 231.5,
+  "black_clock_ms": null,
+  "black_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "black_label": "Deepseek V4 Pro",
+  "black_name": "deepseek-deepseek-v4-pro/v1",
+  "black_provider": "deepseek",
+  "black_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:39:58.598846+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:39:58.601481+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "0767364893cb49db9f0a885b1ae71986",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:39:48.322354+00:00",
+      "elapsed_ms": 203,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "rnbqkb1r/ppp2ppp/3p4/4P3/2P1P1n1/8/PP3PPP/RNBQKBNR w KQkq - 0 5",
+      "fen_before": "rnbqkb1r/pppp1ppp/8/4P3/2P1P1n1/8/PP3PPP/RNBQKBNR b KQkq - 0 4",
+      "move_uci": "d7d6",
+      "ply": 8,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:39:48.586514+00:00",
+      "elapsed_ms": 260,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkb1r/ppp2ppp/3p4/4P3/P1P1P1n1/8/1P3PPP/RNBQKBNR b KQkq - 0 5",
+      "fen_before": "rnbqkb1r/ppp2ppp/3p4/4P3/2P1P1n1/8/PP3PPP/RNBQKBNR w KQkq - 0 5",
+      "move_uci": "a2a4",
+      "ply": 9,
+      "raw_engine_id": "f6b358e59055ba9b"
+    }
+  ],
+  "opening_fen": "rnbqkb1r/pppp1ppp/8/4P3/2P1P1n1/8/PP3PPP/RNBQKBNR b KQkq - 0 4",
+  "opening_label": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 ...",
+  "opening_moves": [
+    "d2d4",
+    "g8f6",
+    "c2c4",
+    "e7e5",
+    "d4e5",
+    "f6g4",
+    "e2e4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:800",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-haiku-4-5/v1\"]\n[Black \"deepseek-deepseek-v4-pro/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:200\"]\n[FEN \"rnbqkb1r/pppp1ppp/8/4P3/2P1P1n1/8/PP3PPP/RNBQKBNR b KQkq - 0 4\"]\n[SetUp \"1\"]\n[Opening \"d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4\"]\n[OpeningSource \"competition/openings.txt:800\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n4... d6 5. a4 *\n",
+  "plies": 2,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:39:47.874911+00:00",
+  "started_at": "2026-05-11T00:39:47.877068+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "white_label": "Claude Haiku 4 5",
+  "white_name": "anthropic-claude-haiku-4-5/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "f6b358e59055ba9b",
+  "winner_engine_id": "anthropic-claude-haiku-4-5/v1"
+}

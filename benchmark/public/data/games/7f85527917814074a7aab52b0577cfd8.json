@@ -1,0 +1,134 @@
+{
+  "avg_elapsed_ms": 505.0,
+  "black_clock_ms": null,
+  "black_engine_id": "stockfish/example",
+  "black_label": "Stockfish",
+  "black_name": "stockfish/example",
+  "black_provider": "stockfish",
+  "black_raw_engine_id": "a9e3876c3d805e30",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:17:35.043440+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:17:35.048580+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "7f85527917814074a7aab52b0577cfd8",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:24.021473+00:00",
+      "elapsed_ms": 508,
+      "engine_id": "stockfish/example",
+      "fen_after": "r2qk2r/1bppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 w kq - 1 8",
+      "fen_before": "r1bqk2r/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 7",
+      "move_uci": "c8b7",
+      "ply": 14,
+      "raw_engine_id": "a9e3876c3d805e30"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:24.530663+00:00",
+      "elapsed_ms": 502,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "r2qk2r/1bppbppp/p1n2n2/1P2p3/4P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 8",
+      "fen_before": "r2qk2r/1bppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 w kq - 1 8",
+      "move_uci": "a4b5",
+      "ply": 15,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:25.039458+00:00",
+      "elapsed_ms": 505,
+      "engine_id": "stockfish/example",
+      "fen_after": "r2qk2r/1bppbppp/2n2n2/1p2p3/4P3/1B3N2/1PPP1PPP/RNBQ1RK1 w kq - 0 9",
+      "fen_before": "r2qk2r/1bppbppp/p1n2n2/1P2p3/4P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 8",
+      "move_uci": "a6b5",
+      "ply": 16,
+      "raw_engine_id": "a9e3876c3d805e30"
+    }
+  ],
+  "opening_fen": "r1bqk2r/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 7",
+  "opening_label": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "g1f3",
+    "b8c6",
+    "f1b5",
+    "a7a6",
+    "b5a4",
+    "g8f6",
+    "e1g1",
+    "b7b5",
+    "a4b3",
+    "f8e7",
+    "a2a4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:2045",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"deepseek-deepseek-v4-pro/v1\"]\n[Black \"stockfish/example\"]\n[Result \"*\"]\n[TimeControl \"movetime:500\"]\n[FEN \"r1bqk2r/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 7\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 f8e7 a2a4\"]\n[OpeningSource \"competition/openings.txt:2045\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n7... Bb7 8. axb5 axb5 *\n",
+  "plies": 3,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "0-1",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:17:22.606964+00:00",
+  "started_at": "2026-05-11T00:17:22.608234+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 500
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "white_label": "Deepseek V4 Pro",
+  "white_name": "deepseek-deepseek-v4-pro/v1",
+  "white_provider": "deepseek",
+  "white_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "winner_engine_id": "stockfish/example"
+}

@@ -1,0 +1,118 @@
+{
+  "avg_elapsed_ms": 163.5,
+  "black_clock_ms": null,
+  "black_engine_id": "anthropic-claude-opus-4-7/v1",
+  "black_label": "Claude Opus 4 7",
+  "black_name": "anthropic-claude-opus-4-7/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "db56b5ef1dff9918",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:18:13.753560+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:18:13.757998+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "ebe766f651a8414d845c0dd458d2125b",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:18:03.621114+00:00",
+      "elapsed_ms": 202,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "r1bqkb1r/ppp2ppp/2Bp1n2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 0 5",
+      "fen_before": "r1bqkb1r/ppp2ppp/2np1n2/1B2p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 5",
+      "move_uci": "b5c6",
+      "ply": 9,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:18:03.750741+00:00",
+      "elapsed_ms": 125,
+      "engine_id": "anthropic-claude-opus-4-7/v1",
+      "fen_after": "r1bqkb1r/p1p2ppp/2pp1n2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 6",
+      "fen_before": "r1bqkb1r/ppp2ppp/2Bp1n2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 0 5",
+      "move_uci": "b7c6",
+      "ply": 10,
+      "raw_engine_id": "db56b5ef1dff9918"
+    }
+  ],
+  "opening_fen": "r1bqkb1r/ppp2ppp/2np1n2/1B2p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 5",
+  "opening_label": "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "g1f3",
+    "b8c6",
+    "f1b5",
+    "g8f6",
+    "e1g1",
+    "d7d6"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:2187",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"deepseek-deepseek-v4-pro/v1\"]\n[Black \"anthropic-claude-opus-4-7/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:200\"]\n[FEN \"r1bqkb1r/ppp2ppp/2np1n2/1B2p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 5\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 d7d6\"]\n[OpeningSource \"competition/openings.txt:2187\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n5. Bxc6+ bxc6 *\n",
+  "plies": 2,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "0-1",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:18:03.151292+00:00",
+  "started_at": "2026-05-11T00:18:03.153118+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "white_label": "Deepseek V4 Pro",
+  "white_name": "deepseek-deepseek-v4-pro/v1",
+  "white_provider": "deepseek",
+  "white_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "winner_engine_id": "anthropic-claude-opus-4-7/v1"
+}

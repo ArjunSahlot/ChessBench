@@ -1,0 +1,253 @@
+{
+  "avg_elapsed_ms": 1516.7,
+  "black_clock_ms": 55236,
+  "black_engine_id": "megalodon/example",
+  "black_label": "Megalodon",
+  "black_name": "megalodon/example",
+  "black_provider": "megalodon",
+  "black_raw_engine_id": "0939a2486b50cd45",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T00:41:08.756697+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "9e2d5ca9777944efac7e29f0e7d76fad",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": 59959,
+      "created_at": "2026-05-11T00:40:44.503426+00:00",
+      "elapsed_ms": 521,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/3q4/4pP2/3P4/PPP3PP/RNBQKBNR w KQkq - 0 5",
+      "fen_before": "rnbqkbnr/ppp2ppp/8/3P4/4pP2/3P4/PPP3PP/RNBQKBNR b KQkq - 0 4",
+      "move_uci": "d8d5",
+      "ply": 8,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 58227,
+      "created_at": "2026-05-11T00:40:46.767239+00:00",
+      "elapsed_ms": 2253,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/3q4/4PP2/8/PPP3PP/RNBQKBNR b KQkq - 0 5",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/3q4/4pP2/3P4/PPP3PP/RNBQKBNR w KQkq - 0 5",
+      "move_uci": "d3e4",
+      "ply": 9,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 59352,
+      "created_at": "2026-05-11T00:40:47.858607+00:00",
+      "elapsed_ms": 1087,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/8/4qP2/8/PPP3PP/RNBQKBNR w KQkq - 0 6",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/3q4/4PP2/8/PPP3PP/RNBQKBNR b KQkq - 0 5",
+      "move_uci": "d5e4",
+      "ply": 10,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 56603,
+      "created_at": "2026-05-11T00:40:49.966037+00:00",
+      "elapsed_ms": 2104,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/8/4qP2/8/PPP1Q1PP/RNB1KBNR b KQkq - 1 6",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/8/4qP2/8/PPP3PP/RNBQKBNR w KQkq - 0 6",
+      "move_uci": "d1e2",
+      "ply": 11,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 58721,
+      "created_at": "2026-05-11T00:40:51.082436+00:00",
+      "elapsed_ms": 1111,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/8/5P2/8/PPP1q1PP/RNB1KBNR w KQkq - 0 7",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/8/4qP2/8/PPP1Q1PP/RNB1KBNR b KQkq - 1 6",
+      "move_uci": "e4e2",
+      "ply": 12,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 55015,
+      "created_at": "2026-05-11T00:40:53.154589+00:00",
+      "elapsed_ms": 2068,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kbnr/ppp2ppp/8/8/5P2/8/PPP1N1PP/RNB1KB1R b KQkq - 0 7",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/8/5P2/8/PPP1q1PP/RNB1KBNR w KQkq - 0 7",
+      "move_uci": "g1e2",
+      "ply": 13,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 58134,
+      "created_at": "2026-05-11T00:40:54.231132+00:00",
+      "elapsed_ms": 1067,
+      "engine_id": "megalodon/example",
+      "fen_after": "r1b1kbnr/ppp2ppp/2n5/8/5P2/8/PPP1N1PP/RNB1KB1R w KQkq - 1 8",
+      "fen_before": "rnb1kbnr/ppp2ppp/8/8/5P2/8/PPP1N1PP/RNB1KB1R b KQkq - 0 7",
+      "move_uci": "b8c6",
+      "ply": 14,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 53649,
+      "created_at": "2026-05-11T00:40:56.080552+00:00",
+      "elapsed_ms": 1846,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "r1b1kbnr/ppp2ppp/2n5/8/5P2/6N1/PPP3PP/RNB1KB1R b KQkq - 2 8",
+      "fen_before": "r1b1kbnr/ppp2ppp/2n5/8/5P2/8/PPP1N1PP/RNB1KB1R w KQkq - 1 8",
+      "move_uci": "e2g3",
+      "ply": 15,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 57499,
+      "created_at": "2026-05-11T00:40:57.199314+00:00",
+      "elapsed_ms": 1115,
+      "engine_id": "megalodon/example",
+      "fen_after": "r1b1kbnr/ppp2ppp/8/8/3n1P2/6N1/PPP3PP/RNB1KB1R w KQkq - 3 9",
+      "fen_before": "r1b1kbnr/ppp2ppp/2n5/8/5P2/6N1/PPP3PP/RNB1KB1R b KQkq - 2 8",
+      "move_uci": "c6d4",
+      "ply": 16,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 51693,
+      "created_at": "2026-05-11T00:40:59.639440+00:00",
+      "elapsed_ms": 2436,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "r1b1kbnr/ppp2ppp/8/8/3n1P2/3B2N1/PPP3PP/RNB1K2R b KQkq - 4 9",
+      "fen_before": "r1b1kbnr/ppp2ppp/8/8/3n1P2/6N1/PPP3PP/RNB1KB1R w KQkq - 3 9",
+      "move_uci": "f1d3",
+      "ply": 17,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 56810,
+      "created_at": "2026-05-11T00:41:00.812941+00:00",
+      "elapsed_ms": 1169,
+      "engine_id": "megalodon/example",
+      "fen_after": "r1b1k1nr/ppp2ppp/3b4/8/3n1P2/3B2N1/PPP3PP/RNB1K2R w KQkq - 5 10",
+      "fen_before": "r1b1kbnr/ppp2ppp/8/8/3n1P2/3B2N1/PPP3PP/RNB1K2R b KQkq - 4 9",
+      "move_uci": "f8d6",
+      "ply": 18,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 50417,
+      "created_at": "2026-05-11T00:41:02.572405+00:00",
+      "elapsed_ms": 1756,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "r1b1k1nr/ppp2ppp/3b4/8/3n1P2/3BB1N1/PPP3PP/RN2K2R b KQkq - 6 10",
+      "fen_before": "r1b1k1nr/ppp2ppp/3b4/8/3n1P2/3B2N1/PPP3PP/RNB1K2R w KQkq - 5 10",
+      "move_uci": "c1e3",
+      "ply": 19,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 56059,
+      "created_at": "2026-05-11T00:41:03.810019+00:00",
+      "elapsed_ms": 1231,
+      "engine_id": "megalodon/example",
+      "fen_after": "r1b1k1nr/ppp2ppp/3bn3/8/5P2/3BB1N1/PPP3PP/RN2K2R w KQkq - 7 11",
+      "fen_before": "r1b1k1nr/ppp2ppp/3b4/8/3n1P2/3BB1N1/PPP3PP/RN2K2R b KQkq - 6 10",
+      "move_uci": "d4e6",
+      "ply": 20,
+      "raw_engine_id": "0939a2486b50cd45"
+    },
+    {
+      "clock_ms": 49214,
+      "created_at": "2026-05-11T00:41:05.498166+00:00",
+      "elapsed_ms": 1683,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "r1b1k1nr/ppp2ppp/3bn3/7N/5P2/3BB3/PPP3PP/RN2K2R b KQkq - 8 11",
+      "fen_before": "r1b1k1nr/ppp2ppp/3bn3/8/5P2/3BB1N1/PPP3PP/RN2K2R w KQkq - 7 11",
+      "move_uci": "g3h5",
+      "ply": 21,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": 55236,
+      "created_at": "2026-05-11T00:41:06.804233+00:00",
+      "elapsed_ms": 1303,
+      "engine_id": "megalodon/example",
+      "fen_after": "r1b1k1nr/ppp2p1p/3bn1p1/7N/5P2/3BB3/PPP3PP/RN2K2R w KQkq - 0 12",
+      "fen_before": "r1b1k1nr/ppp2ppp/3bn3/7N/5P2/3BB3/PPP3PP/RN2K2R b KQkq - 8 11",
+      "move_uci": "g7g6",
+      "ply": 22,
+      "raw_engine_id": "0939a2486b50cd45"
+    }
+  ],
+  "opening_fen": "rnbqkbnr/ppp2ppp/8/3P4/4pP2/3P4/PPP3PP/RNBQKBNR b KQkq - 0 4",
+  "opening_label": "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "f2f4",
+    "d7d5",
+    "e4d5",
+    "e5e4",
+    "d2d3"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1784",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-haiku-4-5/v1\"]\n[Black \"megalodon/example\"]\n[Result \"0-1\"]\n[TimeControl \"clock:60000+500\"]\n[FEN \"rnbqkbnr/ppp2ppp/8/3P4/4pP2/3P4/PPP3PP/RNBQKBNR b KQkq - 0 4\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3\"]\n[OpeningSource \"competition/openings.txt:1784\"]\n[Termination \"illegal move h5a8\"]\n\n4... Qxd5 5. dxe4 Qxe4+ 6. Qe2 Qxe2+ 7. Nxe2 Nc6 8. Ng3 Nd4 9. Bd3 Bd6 10. Be3 Ne6 11. Nh5 g6 0-1\n",
+  "plies": 15,
+  "reason": "illegal move h5a8",
+  "result": "0-1",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T00:40:42.583226+00:00",
+  "started_at": "2026-05-11T00:40:42.585180+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 500,
+    "init_ms": 60000,
+    "move_overhead_ms": 20,
+    "movetime_ms": 100
+  },
+  "white_clock_ms": 49214,
+  "white_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "white_label": "Claude Haiku 4 5",
+  "white_name": "anthropic-claude-haiku-4-5/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "f6b358e59055ba9b",
+  "winner_engine_id": "megalodon/example"
+}

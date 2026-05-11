@@ -1,0 +1,129 @@
+{
+  "avg_elapsed_ms": 1526.3,
+  "black_clock_ms": 58102,
+  "black_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "black_label": "Deepseek V4 Pro",
+  "black_name": "deepseek-deepseek-v4-pro/v1",
+  "black_provider": "deepseek",
+  "black_raw_engine_id": "c2178e0dcf104d1f",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T01:21:33.226959+00:00",
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": "c2178e0dcf104d1f"
+    }
+  ],
+  "finished_at": "2026-05-11T01:21:33.230459+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "d515f9e7387d40d68155b4d44e52d621",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": 59385,
+      "created_at": "2026-05-11T01:21:18.475962+00:00",
+      "elapsed_ms": 1095,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbqkb1r/ppp2ppp/8/3pP3/4P3/8/PPP3PP/RNBQKBNR b KQkq - 0 5",
+      "fen_before": "rnbqkb1r/ppp2ppp/8/3pP3/4n3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 5",
+      "move_uci": "f3e4",
+      "ply": 9,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": 58102,
+      "created_at": "2026-05-11T01:21:20.857922+00:00",
+      "elapsed_ms": 2378,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "rnb1kb1r/ppp2ppp/8/3pP3/4P2q/8/PPP3PP/RNBQKBNR w KQkq - 1 6",
+      "fen_before": "rnbqkb1r/ppp2ppp/8/3pP3/4P3/8/PPP3PP/RNBQKBNR b KQkq - 0 5",
+      "move_uci": "d8h4",
+      "ply": 10,
+      "raw_engine_id": "c2178e0dcf104d1f"
+    },
+    {
+      "clock_ms": 58759,
+      "created_at": "2026-05-11T01:21:21.969248+00:00",
+      "elapsed_ms": 1106,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kb1r/ppp2ppp/8/3pP3/4P2q/8/PPPK2PP/RNBQ1BNR b kq - 2 6",
+      "fen_before": "rnb1kb1r/ppp2ppp/8/3pP3/4P2q/8/PPP3PP/RNBQKBNR w KQkq - 1 6",
+      "move_uci": "e1d2",
+      "ply": 11,
+      "raw_engine_id": "24aef16cc478c0f8"
+    }
+  ],
+  "opening_fen": "rnbqkb1r/ppp2ppp/8/3pP3/4n3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 5",
+  "opening_label": "d2d4 g8f6 f2f3 d7d5 e2e4 e7e5 ...",
+  "opening_moves": [
+    "d2d4",
+    "g8f6",
+    "f2f3",
+    "d7d5",
+    "e2e4",
+    "e7e5",
+    "d4e5",
+    "f6e4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1150",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"megalodon/example\"]\n[Black \"deepseek-deepseek-v4-pro/v1\"]\n[Result \"1-0\"]\n[TimeControl \"clock:60000+500\"]\n[FEN \"rnbqkb1r/ppp2ppp/8/3pP3/4n3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 5\"]\n[SetUp \"1\"]\n[Opening \"d2d4 g8f6 f2f3 d7d5 e2e4 e7e5 d4e5 f6e4\"]\n[OpeningSource \"competition/openings.txt:1150\"]\n[Termination \"engine error: timed out waiting for engine output\"]\n\n5. fxe4 Qh4+ 6. Kd2 1-0\n",
+  "plies": 3,
+  "reason": "engine error: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T01:21:16.978201+00:00",
+  "started_at": "2026-05-11T01:21:16.980157+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 500,
+    "init_ms": 60000,
+    "move_overhead_ms": 20,
+    "movetime_ms": 100
+  },
+  "white_clock_ms": 58759,
+  "white_engine_id": "megalodon/example",
+  "white_label": "Megalodon",
+  "white_name": "megalodon/example",
+  "white_provider": "megalodon",
+  "white_raw_engine_id": "24aef16cc478c0f8",
+  "winner_engine_id": "megalodon/example"
+}

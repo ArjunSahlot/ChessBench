@@ -1,0 +1,114 @@
+{
+  "avg_elapsed_ms": null,
+  "black_clock_ms": null,
+  "black_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "black_label": "Claude Haiku 4 5",
+  "black_name": "anthropic-claude-haiku-4-5/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "9d9586aa3a1655d5",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:47:24.477063+00:00",
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": "9d9586aa3a1655d5"
+    }
+  ],
+  "finished_at": "2026-05-11T00:47:24.483285+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "b459b6c919cd4c649b1c2ad48bb58e19",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [],
+  "opening_fen": "r2qrbk1/1bpn1ppp/p2p1n2/1p2p1B1/3PP3/2P2N1P/PPB2PP1/R2QRNK1 b - - 8 14",
+  "opening_label": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "g1f3",
+    "b8c6",
+    "f1b5",
+    "a7a6",
+    "b5a4",
+    "g8f6",
+    "e1g1",
+    "f8e7",
+    "f1e1",
+    "b7b5",
+    "a4b3",
+    "d7d6",
+    "c2c3",
+    "e8g8",
+    "h2h3",
+    "c6b8",
+    "d2d4",
+    "b8d7",
+    "b1d2",
+    "c8b7",
+    "b3c2",
+    "f8e8",
+    "d2f1",
+    "e7f8",
+    "c1g5"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:2108",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"megalodon/example\"]\n[Black \"anthropic-claude-haiku-4-5/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:50\"]\n[FEN \"r2qrbk1/1bpn1ppp/p2p1n2/1p2p1B1/3PP3/2P2N1P/PPB2PP1/R2QRNK1 b - - 8 14\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6b8 d2d4 b8d7 b1d2 c8b7 b3c2 f8e8 d2f1 e7f8 c1g5\"]\n[OpeningSource \"competition/openings.txt:2108\"]\n[Termination \"engine error: timed out waiting for engine output\"]\n\n1-0\n",
+  "plies": 0,
+  "reason": "engine error: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T00:47:13.109897+00:00",
+  "started_at": "2026-05-11T00:47:13.111256+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 50
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "megalodon/example",
+  "white_label": "Megalodon",
+  "white_name": "megalodon/example",
+  "white_provider": "megalodon",
+  "white_raw_engine_id": "24aef16cc478c0f8",
+  "winner_engine_id": "megalodon/example"
+}

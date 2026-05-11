@@ -1,0 +1,269 @@
+{
+  "avg_elapsed_ms": 147.4,
+  "black_clock_ms": null,
+  "black_engine_id": "megalodon/example",
+  "black_label": "Megalodon",
+  "black_name": "megalodon/example",
+  "black_provider": "megalodon",
+  "black_raw_engine_id": "24aef16cc478c0f8",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T01:38:24.275012+00:00",
+  "forfeiting_engine_id": null,
+  "game_id": "ef88f64674a145da84eb5826fe6e2a9c",
+  "is_draw": false,
+  "is_forfeit": false,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:22.039479+00:00",
+      "elapsed_ms": 189,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnb1kb1N/ppp1q1pp/5n2/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R b KQq - 1 7",
+      "fen_before": "rnb1kb1N/ppp1q1pp/5n2/3p4/2B1p3/8/PPPP1PPP/RNBQK2R w KQq - 0 7",
+      "move_uci": "d1h5",
+      "ply": 13,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:22.283320+00:00",
+      "elapsed_ms": 237,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kb1N/ppp1q1pp/8/3p3n/2B1p3/8/PPPP1PPP/RNB1K2R w KQq - 0 8",
+      "fen_before": "rnb1kb1N/ppp1q1pp/5n2/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R b KQq - 1 7",
+      "move_uci": "f6h5",
+      "ply": 14,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:22.485283+00:00",
+      "elapsed_ms": 198,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnb1kb1N/ppp1q1pp/8/3B3n/4p3/8/PPPP1PPP/RNB1K2R b KQq - 0 8",
+      "fen_before": "rnb1kb1N/ppp1q1pp/8/3p3n/2B1p3/8/PPPP1PPP/RNB1K2R w KQq - 0 8",
+      "move_uci": "c4d5",
+      "ply": 15,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:22.732473+00:00",
+      "elapsed_ms": 238,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnb1kb1N/ppp1q1pp/8/3B4/4pn2/8/PPPP1PPP/RNB1K2R w KQq - 1 9",
+      "fen_before": "rnb1kb1N/ppp1q1pp/8/3B3n/4p3/8/PPPP1PPP/RNB1K2R b KQq - 0 8",
+      "move_uci": "h5f4",
+      "ply": 16,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:22.935128+00:00",
+      "elapsed_ms": 200,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnb1kb1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB1K2R b KQq - 2 9",
+      "fen_before": "rnb1kb1N/ppp1q1pp/8/3B4/4pn2/8/PPPP1PPP/RNB1K2R w KQq - 1 9",
+      "move_uci": "d5f7",
+      "ply": 17,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.181647+00:00",
+      "elapsed_ms": 243,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbk1b1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB1K2R w KQ - 3 10",
+      "fen_before": "rnb1kb1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB1K2R b KQq - 2 9",
+      "move_uci": "e8d8",
+      "ply": 18,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.383935+00:00",
+      "elapsed_ms": 198,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnbk1b1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB2K1R b - - 4 10",
+      "fen_before": "rnbk1b1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB1K2R w KQ - 3 10",
+      "move_uci": "e1f1",
+      "ply": 19,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.628233+00:00",
+      "elapsed_ms": 238,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbk1b1N/ppp2Bpp/8/6q1/4pn2/8/PPPP1PPP/RNB2K1R w - - 5 11",
+      "fen_before": "rnbk1b1N/ppp1qBpp/8/8/4pn2/8/PPPP1PPP/RNB2K1R b - - 4 10",
+      "move_uci": "e7g5",
+      "ply": 20,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.674876+00:00",
+      "elapsed_ms": 43,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnbk1b1N/ppp2Bpp/8/6q1/4pnP1/8/PPPP1P1P/RNB2K1R b - - 0 11",
+      "fen_before": "rnbk1b1N/ppp2Bpp/8/6q1/4pn2/8/PPPP1PPP/RNB2K1R w - - 5 11",
+      "move_uci": "g2g4",
+      "ply": 21,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.920860+00:00",
+      "elapsed_ms": 243,
+      "engine_id": "megalodon/example",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/4pnb1/8/PPPP1P1P/RNB2K1R w - - 0 12",
+      "fen_before": "rnbk1b1N/ppp2Bpp/8/6q1/4pnP1/8/PPPP1P1P/RNB2K1R b - - 0 11",
+      "move_uci": "c8g4",
+      "ply": 22,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:23.931929+00:00",
+      "elapsed_ms": 7,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/4pnb1/8/PPPP1P1P/RNB1K2R b - - 1 12",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/4pnb1/8/PPPP1P1P/RNB2K1R w - - 0 12",
+      "move_uci": "f1e1",
+      "ply": 23,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:24.166502+00:00",
+      "elapsed_ms": 232,
+      "engine_id": "megalodon/example",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/4pn2/5b2/PPPP1P1P/RNB1K2R w - - 2 13",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/4pnb1/8/PPPP1P1P/RNB1K2R b - - 1 12",
+      "move_uci": "g4f3",
+      "ply": 24,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:24.175050+00:00",
+      "elapsed_ms": 5,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/3Ppn2/5b2/PPP2P1P/RNB1K2R b - d3 0 13",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/4pn2/5b2/PPPP1P1P/RNB1K2R w - - 2 13",
+      "move_uci": "d2d4",
+      "ply": 25,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:24.221791+00:00",
+      "elapsed_ms": 43,
+      "engine_id": "megalodon/example",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/3Pp3/3n1b2/PPP2P1P/RNB1K2R w - - 1 14",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/3Ppn2/5b2/PPP2P1P/RNB1K2R b - d3 0 13",
+      "move_uci": "f4d3",
+      "ply": 26,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:24.226152+00:00",
+      "elapsed_ms": 1,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/6q1/3Pp3/3n1b2/PPP2P1P/RNB2K1R b - - 2 14",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/3Pp3/3n1b2/PPP2P1P/RNB1K2R w - - 1 14",
+      "move_uci": "e1f1",
+      "ply": 27,
+      "raw_engine_id": "79ace14c6260465a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:38:24.273476+00:00",
+      "elapsed_ms": 44,
+      "engine_id": "megalodon/example",
+      "fen_after": "rn1k1b1N/ppp2Bpp/8/8/3Pp3/3n1b2/PPP2P1P/RNq2K1R w - - 0 15",
+      "fen_before": "rn1k1b1N/ppp2Bpp/8/6q1/3Pp3/3n1b2/PPP2P1P/RNB2K1R b - - 2 14",
+      "move_uci": "g5c1",
+      "ply": 28,
+      "raw_engine_id": "24aef16cc478c0f8"
+    }
+  ],
+  "opening_fen": "rnb1kb1N/ppp1q1pp/5n2/3p4/2B1p3/8/PPPP1PPP/RNBQK2R w KQq - 0 7",
+  "opening_label": "e2e4 e7e5 g1f3 f7f5 f3e5 g8f6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "g1f3",
+    "f7f5",
+    "f3e5",
+    "g8f6",
+    "f1c4",
+    "f5e4",
+    "e5f7",
+    "d8e7",
+    "f7h8",
+    "d7d5"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:2358",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-sonnet-4-6/v1\"]\n[Black \"megalodon/example\"]\n[Result \"0-1\"]\n[TimeControl \"movetime:200\"]\n[FEN \"rnb1kb1N/ppp1q1pp/5n2/3p4/2B1p3/8/PPPP1PPP/RNBQK2R w KQq - 0 7\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 g1f3 f7f5 f3e5 g8f6 f1c4 f5e4 e5f7 d8e7 f7h8 d7d5\"]\n[OpeningSource \"competition/openings.txt:2358\"]\n[Termination \"checkmate\"]\n\n7. Qh5+ Nxh5 8. Bxd5 Nf4 9. Bf7+ Kd8 10. Kf1 Qg5 11. g4 Bxg4 12. Ke1 Bf3 13. d4 Nd3+ 14. Kf1 Qxc1# 0-1\n",
+  "plies": 16,
+  "reason": "checkmate",
+  "result": "0-1",
+  "result_source": "game",
+  "scheduled_at": "2026-05-11T01:38:21.626874+00:00",
+  "started_at": "2026-05-11T01:38:21.628826+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "anthropic-claude-sonnet-4-6/v1",
+  "white_label": "Claude Sonnet 4 6",
+  "white_name": "anthropic-claude-sonnet-4-6/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "79ace14c6260465a",
+  "winner_engine_id": "megalodon/example"
+}

@@ -1,0 +1,89 @@
+{
+  "avg_elapsed_ms": null,
+  "black_clock_ms": null,
+  "black_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "black_label": "Deepseek V4 Pro",
+  "black_name": "deepseek-deepseek-v4-pro/v1",
+  "black_provider": "deepseek",
+  "black_raw_engine_id": "c2178e0dcf104d1f",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T01:13:38.430078+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "90aef4460fa048bd8c06fad4433cc5f6",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [],
+  "opening_fen": "rnbqk1nr/pppp1ppp/8/2b5/2B1P3/2p2N2/PP3PPP/RNBQK2R b KQkq - 1 5",
+  "opening_label": "e2e4 e7e5 d2d4 e5d4 g1f3 f8c5 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "d2d4",
+    "e5d4",
+    "g1f3",
+    "f8c5",
+    "c2c3",
+    "d4c3",
+    "f1c4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1734",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"megalodon/example\"]\n[Black \"deepseek-deepseek-v4-pro/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:50\"]\n[FEN \"rnbqk1nr/pppp1ppp/8/2b5/2B1P3/2p2N2/PP3PPP/RNBQK2R b KQkq - 1 5\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 d2d4 e5d4 g1f3 f8c5 c2c3 d4c3 f1c4\"]\n[OpeningSource \"competition/openings.txt:1734\"]\n[Termination \"illegal move c3b2q\"]\n\n1-0\n",
+  "plies": 0,
+  "reason": "illegal move c3b2q",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T01:13:38.014940+00:00",
+  "started_at": "2026-05-11T01:13:38.016970+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 50
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "megalodon/example",
+  "white_label": "Megalodon",
+  "white_name": "megalodon/example",
+  "white_provider": "megalodon",
+  "white_raw_engine_id": "24aef16cc478c0f8",
+  "winner_engine_id": "megalodon/example"
+}

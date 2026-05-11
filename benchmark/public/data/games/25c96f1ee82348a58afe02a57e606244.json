@@ -1,0 +1,103 @@
+{
+  "avg_elapsed_ms": 504.0,
+  "black_clock_ms": null,
+  "black_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "black_label": "Claude Haiku 4 5",
+  "black_name": "anthropic-claude-haiku-4-5/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "f6b358e59055ba9b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:18:25.648578+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:18:25.651521+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "25c96f1ee82348a58afe02a57e606244",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:18:14.532297+00:00",
+      "elapsed_ms": 504,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "rnbqkb1r/p1pppppp/5n2/1p6/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+      "fen_before": "rnbqkb1r/p1pppppp/5n2/1p6/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+      "move_uci": "b1c3",
+      "ply": 5,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    }
+  ],
+  "opening_fen": "rnbqkb1r/p1pppppp/5n2/1p6/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+  "opening_label": "d2d4 g8f6 c2c4 b7b5",
+  "opening_moves": [
+    "d2d4",
+    "g8f6",
+    "c2c4",
+    "b7b5"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:722",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"deepseek-deepseek-v4-pro/v1\"]\n[Black \"anthropic-claude-haiku-4-5/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:500\"]\n[FEN \"rnbqkb1r/p1pppppp/5n2/1p6/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3\"]\n[SetUp \"1\"]\n[Opening \"d2d4 g8f6 c2c4 b7b5\"]\n[OpeningSource \"competition/openings.txt:722\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n3. Nc3 *\n",
+  "plies": 1,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:18:13.781334+00:00",
+  "started_at": "2026-05-11T00:18:13.782132+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 500
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "white_label": "Deepseek V4 Pro",
+  "white_name": "deepseek-deepseek-v4-pro/v1",
+  "white_provider": "deepseek",
+  "white_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "winner_engine_id": "deepseek-deepseek-v4-pro/v1"
+}

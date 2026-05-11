@@ -1,0 +1,132 @@
+{
+  "avg_elapsed_ms": 203.5,
+  "black_clock_ms": null,
+  "black_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "black_label": "Claude Haiku 4 5",
+  "black_name": "anthropic-claude-haiku-4-5/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "f6b358e59055ba9b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-10T23:57:10.688767+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "c5e50ee385d7417c83b657ae7af869ec",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:09.846771+00:00",
+      "elapsed_ms": 221,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqk1nr/pppp1ppp/4p3/8/1bP3P1/2N2N2/PP1PPP1P/R1BQKB1R w KQkq - 1 5",
+      "fen_before": "rnbqk2r/pppp1ppp/4pn2/8/1bP3P1/2N2N2/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+      "move_uci": "f6g8",
+      "ply": 8,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:10.013683+00:00",
+      "elapsed_ms": 163,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnbqk1nr/pppp1ppp/4p3/1N6/1bP3P1/5N2/PP1PPP1P/R1BQKB1R b KQkq - 2 5",
+      "fen_before": "rnbqk1nr/pppp1ppp/4p3/8/1bP3P1/2N2N2/PP1PPP1P/R1BQKB1R w KQkq - 1 5",
+      "move_uci": "c3b5",
+      "ply": 9,
+      "raw_engine_id": "68f05ab09dadd30f"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:10.317068+00:00",
+      "elapsed_ms": 300,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqk1nr/pp1p1ppp/2p1p3/1N6/1bP3P1/5N2/PP1PPP1P/R1BQKB1R w KQkq - 0 6",
+      "fen_before": "rnbqk1nr/pppp1ppp/4p3/1N6/1bP3P1/5N2/PP1PPP1P/R1BQKB1R b KQkq - 2 5",
+      "move_uci": "c7c6",
+      "ply": 10,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:10.452453+00:00",
+      "elapsed_ms": 130,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "rnbqk1nr/ppNp1ppp/2p1p3/8/1bP3P1/5N2/PP1PPP1P/R1BQKB1R b KQkq - 1 6",
+      "fen_before": "rnbqk1nr/pp1p1ppp/2p1p3/1N6/1bP3P1/5N2/PP1PPP1P/R1BQKB1R w KQkq - 0 6",
+      "move_uci": "b5c7",
+      "ply": 11,
+      "raw_engine_id": "68f05ab09dadd30f"
+    }
+  ],
+  "opening_fen": "rnbqk2r/pppp1ppp/4pn2/8/1bP3P1/2N2N2/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+  "opening_label": "c2c4 g8f6 b1c3 e7e6 g1f3 f8b4 ...",
+  "opening_moves": [
+    "c2c4",
+    "g8f6",
+    "b1c3",
+    "e7e6",
+    "g1f3",
+    "f8b4",
+    "g2g4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:168",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-sonnet-4-6/v1\"]\n[Black \"anthropic-claude-haiku-4-5/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:200\"]\n[FEN \"rnbqk2r/pppp1ppp/4pn2/8/1bP3P1/2N2N2/PP1PPP1P/R1BQKB1R b KQkq - 0 4\"]\n[SetUp \"1\"]\n[Opening \"c2c4 g8f6 b1c3 e7e6 g1f3 f8b4 g2g4\"]\n[OpeningSource \"competition/openings.txt:168\"]\n[Termination \"illegal move b4a3\"]\n\n4... Ng8 5. Nb5 c6 6. Nc7+ 1-0\n",
+  "plies": 4,
+  "reason": "illegal move b4a3",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-10T23:57:09.508618+00:00",
+  "started_at": "2026-05-10T23:57:09.509253+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "anthropic-claude-sonnet-4-6/v1",
+  "white_label": "Claude Sonnet 4 6",
+  "white_name": "anthropic-claude-sonnet-4-6/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "68f05ab09dadd30f",
+  "winner_engine_id": "anthropic-claude-sonnet-4-6/v1"
+}

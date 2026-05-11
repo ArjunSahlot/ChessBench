@@ -1,0 +1,106 @@
+{
+  "avg_elapsed_ms": 374.0,
+  "black_clock_ms": null,
+  "black_engine_id": "openai-gpt-5.4-mini/v1",
+  "black_label": "GPT-5.4 Mini",
+  "black_name": "openai-gpt-5.4-mini/v1",
+  "black_provider": "openai",
+  "black_raw_engine_id": "7b546e02e7f94e6b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-10T23:55:03.440253+00:00",
+  "forfeiting_engine_id": "openai-gpt-5.4-mini/v1",
+  "game_id": "a15e66d0de7745e5be3cf3c04c3ca6d6",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:55:02.929676+00:00",
+      "elapsed_ms": 374,
+      "engine_id": "anthropic-claude-sonnet-4-6/v1",
+      "fen_after": "r1bq1rk1/ppp2pbp/2np1np1/4P3/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 8",
+      "fen_before": "r1bq1rk1/ppp2pbp/2np1np1/4p3/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8",
+      "move_uci": "d4e5",
+      "ply": 15,
+      "raw_engine_id": "68f05ab09dadd30f"
+    }
+  ],
+  "opening_fen": "r1bq1rk1/ppp2pbp/2np1np1/4p3/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8",
+  "opening_label": "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 ...",
+  "opening_moves": [
+    "d2d4",
+    "g8f6",
+    "c2c4",
+    "g7g6",
+    "g2g3",
+    "f8g7",
+    "f1g2",
+    "d7d6",
+    "g1f3",
+    "e8g8",
+    "b1c3",
+    "b8c6",
+    "e1g1",
+    "e7e5"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1139",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-sonnet-4-6/v1\"]\n[Black \"openai-gpt-5.4-mini/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:500\"]\n[FEN \"r1bq1rk1/ppp2pbp/2np1np1/4p3/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8\"]\n[SetUp \"1\"]\n[Opening \"d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 e8g8 b1c3 b8c6 e1g1 e7e5\"]\n[OpeningSource \"competition/openings.txt:1139\"]\n[Termination \"illegal move d6e5q\"]\n\n8. dxe5 1-0\n",
+  "plies": 1,
+  "reason": "illegal move d6e5q",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-10T23:55:02.447552+00:00",
+  "started_at": "2026-05-10T23:55:02.449362+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 500
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "anthropic-claude-sonnet-4-6/v1",
+  "white_label": "Claude Sonnet 4 6",
+  "white_name": "anthropic-claude-sonnet-4-6/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "68f05ab09dadd30f",
+  "winner_engine_id": "anthropic-claude-sonnet-4-6/v1"
+}

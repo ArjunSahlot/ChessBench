@@ -1,0 +1,186 @@
+{
+  "avg_elapsed_ms": 288.4,
+  "black_clock_ms": null,
+  "black_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "black_label": "Claude Haiku 4 5",
+  "black_name": "anthropic-claude-haiku-4-5/v1",
+  "black_provider": "anthropic",
+  "black_raw_engine_id": "f6b358e59055ba9b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-10T23:54:29.012220+00:00",
+  "forfeiting_engine_id": "anthropic-claude-haiku-4-5/v1",
+  "game_id": "7e4c72f8f47e4983a9c3e03a6d5154bf",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:26.349283+00:00",
+      "elapsed_ms": 33,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "r1bqkbnr/pppp1ppp/2n5/8/2B1Pp2/5N2/PPPP2PP/RNBQK2R b KQkq - 3 4",
+      "fen_before": "r1bqkbnr/pppp1ppp/2n5/8/2B1Pp2/8/PPPP2PP/RNBQK1NR w KQkq - 2 4",
+      "move_uci": "g1f3",
+      "ply": 7,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:26.456942+00:00",
+      "elapsed_ms": 100,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "r1bqkb1r/pppp1ppp/2n2n2/8/2B1Pp2/5N2/PPPP2PP/RNBQK2R w KQkq - 4 5",
+      "fen_before": "r1bqkbnr/pppp1ppp/2n5/8/2B1Pp2/5N2/PPPP2PP/RNBQK2R b KQkq - 3 4",
+      "move_uci": "g8f6",
+      "ply": 8,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:26.493082+00:00",
+      "elapsed_ms": 32,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "r1bqkb1r/pppp1ppp/2n2n2/8/2B1Pp2/2N2N2/PPPP2PP/R1BQK2R b KQkq - 5 5",
+      "fen_before": "r1bqkb1r/pppp1ppp/2n2n2/8/2B1Pp2/5N2/PPPP2PP/RNBQK2R w KQkq - 4 5",
+      "move_uci": "b1c3",
+      "ply": 9,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:27.144987+00:00",
+      "elapsed_ms": 648,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkb1r/pppp1ppp/5n2/8/2B1Pp2/2N2N2/PPPP2PP/R1BQK2R w KQkq - 6 6",
+      "fen_before": "r1bqkb1r/pppp1ppp/2n2n2/8/2B1Pp2/2N2N2/PPPP2PP/R1BQK2R b KQkq - 5 5",
+      "move_uci": "c6b8",
+      "ply": 10,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:27.181602+00:00",
+      "elapsed_ms": 33,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqkb1r/pppp1ppp/5n2/4N3/2B1Pp2/2N5/PPPP2PP/R1BQK2R b KQkq - 7 6",
+      "fen_before": "rnbqkb1r/pppp1ppp/5n2/8/2B1Pp2/2N2N2/PPPP2PP/R1BQK2R w KQkq - 6 6",
+      "move_uci": "f3e5",
+      "ply": 11,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:27.693919+00:00",
+      "elapsed_ms": 509,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnbqkbnr/pppp1ppp/8/4N3/2B1Pp2/2N5/PPPP2PP/R1BQK2R w KQkq - 8 7",
+      "fen_before": "rnbqkb1r/pppp1ppp/5n2/4N3/2B1Pp2/2N5/PPPP2PP/R1BQK2R b KQkq - 7 6",
+      "move_uci": "f6g8",
+      "ply": 12,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:27.733009+00:00",
+      "elapsed_ms": 34,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqkbnr/pppp1Npp/8/8/2B1Pp2/2N5/PPPP2PP/R1BQK2R b KQkq - 0 7",
+      "fen_before": "rnbqkbnr/pppp1ppp/8/4N3/2B1Pp2/2N5/PPPP2PP/R1BQK2R w KQkq - 8 7",
+      "move_uci": "e5f7",
+      "ply": 13,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:28.911971+00:00",
+      "elapsed_ms": 1174,
+      "engine_id": "anthropic-claude-haiku-4-5/v1",
+      "fen_after": "rnb1kbnr/pppp1Npp/5q2/8/2B1Pp2/2N5/PPPP2PP/R1BQK2R w KQkq - 1 8",
+      "fen_before": "rnbqkbnr/pppp1Npp/8/8/2B1Pp2/2N5/PPPP2PP/R1BQK2R b KQkq - 0 7",
+      "move_uci": "d8f6",
+      "ply": 14,
+      "raw_engine_id": "f6b358e59055ba9b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:54:28.951744+00:00",
+      "elapsed_ms": 33,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnb1kbnN/pppp2pp/5q2/8/2B1Pp2/2N5/PPPP2PP/R1BQK2R b KQq - 0 8",
+      "fen_before": "rnb1kbnr/pppp1Npp/5q2/8/2B1Pp2/2N5/PPPP2PP/R1BQK2R w KQkq - 1 8",
+      "move_uci": "f7h8",
+      "ply": 15,
+      "raw_engine_id": "632e3da7a71b792e"
+    }
+  ],
+  "opening_fen": "r1bqkbnr/pppp1ppp/2n5/8/2B1Pp2/8/PPPP2PP/RNBQK1NR w KQkq - 2 4",
+  "opening_label": "e2e4 e7e5 f2f4 e5f4 f1c4 b8c6",
+  "opening_moves": [
+    "e2e4",
+    "e7e5",
+    "f2f4",
+    "e5f4",
+    "f1c4",
+    "b8c6"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:1808",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"openai-gpt-5.5/v1\"]\n[Black \"anthropic-claude-haiku-4-5/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:50\"]\n[FEN \"r1bqkbnr/pppp1ppp/2n5/8/2B1Pp2/8/PPPP2PP/RNBQK1NR w KQkq - 2 4\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e5 f2f4 e5f4 f1c4 b8c6\"]\n[OpeningSource \"competition/openings.txt:1808\"]\n[Termination \"illegal move b8h8\"]\n\n4. Nf3 Nf6 5. Nc3 Nb8 6. Ne5 Ng8 7. Nxf7 Qf6 8. Nxh8 1-0\n",
+  "plies": 9,
+  "reason": "illegal move b8h8",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-10T23:54:26.155300+00:00",
+  "started_at": "2026-05-10T23:54:26.156644+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 50
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "openai-gpt-5.5/v1",
+  "white_label": "GPT-5.5",
+  "white_name": "openai-gpt-5.5/v1",
+  "white_provider": "openai",
+  "white_raw_engine_id": "632e3da7a71b792e",
+  "winner_engine_id": "openai-gpt-5.5/v1"
+}

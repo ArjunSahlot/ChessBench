@@ -1,0 +1,171 @@
+{
+  "avg_elapsed_ms": 314.4,
+  "black_clock_ms": null,
+  "black_engine_id": "kimi-kimi-k2.6/v1",
+  "black_label": "Kimi K2.6",
+  "black_name": "kimi-kimi-k2.6/v1",
+  "black_provider": "kimi",
+  "black_raw_engine_id": "c4d95a632e3870e6",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-10T23:57:24.799353+00:00",
+  "forfeiting_engine_id": "openai-gpt-5.4-mini/v1",
+  "game_id": "2ccfeb9706b44372828313934058d1f1",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:22.174138+00:00",
+      "elapsed_ms": 42,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqkb1r/pppppppp/5n2/8/P1P5/8/1P1PPPPP/RNBQKBNR b KQkq - 0 2",
+      "fen_before": "rnbqkb1r/pppppppp/5n2/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 1 2",
+      "move_uci": "a2a4",
+      "ply": 3,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:22.690117+00:00",
+      "elapsed_ms": 505,
+      "engine_id": "kimi-kimi-k2.6/v1",
+      "fen_after": "r1bqkb1r/pppppppp/2n2n2/8/P1P5/8/1P1PPPPP/RNBQKBNR w KQkq - 1 3",
+      "fen_before": "rnbqkb1r/pppppppp/5n2/8/P1P5/8/1P1PPPPP/RNBQKBNR b KQkq - 0 2",
+      "move_uci": "b8c6",
+      "ply": 4,
+      "raw_engine_id": "c4d95a632e3870e6"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:22.777121+00:00",
+      "elapsed_ms": 84,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "r1bqkb1r/pppppppp/2n2n2/8/P1P1P3/8/1P1P1PPP/RNBQKBNR b KQkq - 0 3",
+      "fen_before": "r1bqkb1r/pppppppp/2n2n2/8/P1P5/8/1P1PPPPP/RNBQKBNR w KQkq - 1 3",
+      "move_uci": "e2e4",
+      "ply": 5,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:23.285326+00:00",
+      "elapsed_ms": 504,
+      "engine_id": "kimi-kimi-k2.6/v1",
+      "fen_after": "r1bqkb1r/pppppppp/2n5/8/P1P1n3/8/1P1P1PPP/RNBQKBNR w KQkq - 0 4",
+      "fen_before": "r1bqkb1r/pppppppp/2n2n2/8/P1P1P3/8/1P1P1PPP/RNBQKBNR b KQkq - 0 3",
+      "move_uci": "f6e4",
+      "ply": 6,
+      "raw_engine_id": "c4d95a632e3870e6"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:23.443814+00:00",
+      "elapsed_ms": 154,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "r1bqkb1r/pppppppp/2n5/8/P1P1n3/1P6/3P1PPP/RNBQKBNR b KQkq - 0 4",
+      "fen_before": "r1bqkb1r/pppppppp/2n5/8/P1P1n3/8/1P1P1PPP/RNBQKBNR w KQkq - 0 4",
+      "move_uci": "b2b3",
+      "ply": 7,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:23.956387+00:00",
+      "elapsed_ms": 508,
+      "engine_id": "kimi-kimi-k2.6/v1",
+      "fen_after": "r1bqkb1r/pppp1ppp/2n1p3/8/P1P1n3/1P6/3P1PPP/RNBQKBNR w KQkq - 0 5",
+      "fen_before": "r1bqkb1r/pppppppp/2n5/8/P1P1n3/1P6/3P1PPP/RNBQKBNR b KQkq - 0 4",
+      "move_uci": "e7e6",
+      "ply": 8,
+      "raw_engine_id": "c4d95a632e3870e6"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:24.175812+00:00",
+      "elapsed_ms": 213,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "r1bqkb1r/pppp1ppp/2n1p3/8/P1P1n3/1P1P4/5PPP/RNBQKBNR b KQkq - 0 5",
+      "fen_before": "r1bqkb1r/pppp1ppp/2n1p3/8/P1P1n3/1P6/3P1PPP/RNBQKBNR w KQkq - 0 5",
+      "move_uci": "d2d3",
+      "ply": 9,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-10T23:57:24.683901+00:00",
+      "elapsed_ms": 505,
+      "engine_id": "kimi-kimi-k2.6/v1",
+      "fen_after": "r1bqkb1r/pppp1ppp/2n1p3/8/P1P5/1P1P4/5nPP/RNBQKBNR w KQkq - 0 6",
+      "fen_before": "r1bqkb1r/pppp1ppp/2n1p3/8/P1P1n3/1P1P4/5PPP/RNBQKBNR b KQkq - 0 5",
+      "move_uci": "e4f2",
+      "ply": 10,
+      "raw_engine_id": "c4d95a632e3870e6"
+    }
+  ],
+  "opening_fen": "rnbqkb1r/pppppppp/5n2/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 1 2",
+  "opening_label": "c2c4 g8f6",
+  "opening_moves": [
+    "c2c4",
+    "g8f6"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:154",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"openai-gpt-5.4-mini/v1\"]\n[Black \"kimi-kimi-k2.6/v1\"]\n[Result \"0-1\"]\n[TimeControl \"movetime:500\"]\n[FEN \"rnbqkb1r/pppppppp/5n2/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 1 2\"]\n[SetUp \"1\"]\n[Opening \"c2c4 g8f6\"]\n[OpeningSource \"competition/openings.txt:154\"]\n[Termination \"illegal move c2c3\"]\n\n2. a4 Nc6 3. e4 Nxe4 4. b3 e6 5. d3 Nxf2 0-1\n",
+  "plies": 8,
+  "reason": "illegal move c2c3",
+  "result": "0-1",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-10T23:57:22.064417+00:00",
+  "started_at": "2026-05-10T23:57:22.065997+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 500
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "openai-gpt-5.4-mini/v1",
+  "white_label": "GPT-5.4 Mini",
+  "white_name": "openai-gpt-5.4-mini/v1",
+  "white_provider": "openai",
+  "white_raw_engine_id": "7b546e02e7f94e6b",
+  "winner_engine_id": "kimi-kimi-k2.6/v1"
+}

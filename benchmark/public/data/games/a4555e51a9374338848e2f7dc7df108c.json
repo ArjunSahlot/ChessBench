@@ -1,0 +1,126 @@
+{
+  "avg_elapsed_ms": 47.7,
+  "black_clock_ms": null,
+  "black_engine_id": "openai-gpt-5.4-mini/v1",
+  "black_label": "GPT-5.4 Mini",
+  "black_name": "openai-gpt-5.4-mini/v1",
+  "black_provider": "openai",
+  "black_raw_engine_id": "7b546e02e7f94e6b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:17:11.961443+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:17:11.966278+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "a4555e51a9374338848e2f7dc7df108c",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:00.688998+00:00",
+      "elapsed_ms": 38,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "r1bqkbnr/1p1ppppp/2n5/p1p5/8/2NP2P1/PPP1PP1P/R1BQKBNR w KQkq - 0 4",
+      "fen_before": "r1bqkbnr/pp1ppppp/2n5/2p5/8/2NP2P1/PPP1PP1P/R1BQKBNR b KQkq - 0 3",
+      "move_uci": "a7a5",
+      "ply": 6,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:00.745668+00:00",
+      "elapsed_ms": 52,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "r1bqkbnr/1p1ppppp/2n5/p1p5/8/2NP2P1/PPP1PP1P/1RBQKBNR b Kkq - 1 4",
+      "fen_before": "r1bqkbnr/1p1ppppp/2n5/p1p5/8/2NP2P1/PPP1PP1P/R1BQKBNR w KQkq - 0 4",
+      "move_uci": "a1b1",
+      "ply": 7,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:17:00.803884+00:00",
+      "elapsed_ms": 53,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "r1bqkbnr/3ppppp/2n5/ppp5/8/2NP2P1/PPP1PP1P/1RBQKBNR w Kkq - 0 5",
+      "fen_before": "r1bqkbnr/1p1ppppp/2n5/p1p5/8/2NP2P1/PPP1PP1P/1RBQKBNR b Kkq - 1 4",
+      "move_uci": "b7b5",
+      "ply": 8,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    }
+  ],
+  "opening_fen": "r1bqkbnr/pp1ppppp/2n5/2p5/8/2NP2P1/PPP1PP1P/R1BQKBNR b KQkq - 0 3",
+  "opening_label": "d2d3 c7c5 b1c3 b8c6 g2g3",
+  "opening_moves": [
+    "d2d3",
+    "c7c5",
+    "b1c3",
+    "b8c6",
+    "g2g3"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:175",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"deepseek-deepseek-v4-pro/v1\"]\n[Black \"openai-gpt-5.4-mini/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:50\"]\n[FEN \"r1bqkbnr/pp1ppppp/2n5/2p5/8/2NP2P1/PPP1PP1P/R1BQKBNR b KQkq - 0 3\"]\n[SetUp \"1\"]\n[Opening \"d2d3 c7c5 b1c3 b8c6 g2g3\"]\n[OpeningSource \"competition/openings.txt:175\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n3... a5 4. Rb1 b5 *\n",
+  "plies": 3,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "0-1",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:17:00.380876+00:00",
+  "started_at": "2026-05-11T00:17:00.382636+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 50
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "white_label": "Deepseek V4 Pro",
+  "white_name": "deepseek-deepseek-v4-pro/v1",
+  "white_provider": "deepseek",
+  "white_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "winner_engine_id": "openai-gpt-5.4-mini/v1"
+}

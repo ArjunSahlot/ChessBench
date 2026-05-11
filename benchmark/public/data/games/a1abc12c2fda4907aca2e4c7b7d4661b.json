@@ -1,0 +1,187 @@
+{
+  "avg_elapsed_ms": 247.6,
+  "black_clock_ms": null,
+  "black_engine_id": "deepseek-deepseek-v4-flash/v1",
+  "black_label": "Deepseek V4 Flash",
+  "black_name": "deepseek-deepseek-v4-flash/v1",
+  "black_provider": "deepseek",
+  "black_raw_engine_id": "5a6220d6dc8c028f",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:19:39.507677+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:19:39.512490+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-flash/v1",
+  "game_id": "a1abc12c2fda4907aca2e4c7b7d4661b",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:27.689798+00:00",
+      "elapsed_ms": 203,
+      "engine_id": "deepseek-deepseek-v4-flash/v1",
+      "fen_after": "rnbq1rk1/ppp1bppp/4pn2/3p4/2PP4/P1N1PN2/1P3PPP/R1BQKB1R w KQ - 1 7",
+      "fen_before": "rnbq1rk1/ppp2ppp/4pn2/3p4/1bPP4/P1N1PN2/1P3PPP/R1BQKB1R b KQ - 0 6",
+      "move_uci": "b4e7",
+      "ply": 12,
+      "raw_engine_id": "5a6220d6dc8c028f"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:28.081203+00:00",
+      "elapsed_ms": 385,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "rnbq1rk1/ppp1bppp/4pn2/3p4/1PPP4/P1N1PN2/5PPP/R1BQKB1R b KQ - 0 7",
+      "fen_before": "rnbq1rk1/ppp1bppp/4pn2/3p4/2PP4/P1N1PN2/1P3PPP/R1BQKB1R w KQ - 1 7",
+      "move_uci": "b2b4",
+      "ply": 13,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:28.290475+00:00",
+      "elapsed_ms": 205,
+      "engine_id": "deepseek-deepseek-v4-flash/v1",
+      "fen_after": "rnbq1rk1/1pp1bppp/4pn2/p2p4/1PPP4/P1N1PN2/5PPP/R1BQKB1R w KQ - 0 8",
+      "fen_before": "rnbq1rk1/ppp1bppp/4pn2/3p4/1PPP4/P1N1PN2/5PPP/R1BQKB1R b KQ - 0 7",
+      "move_uci": "a7a5",
+      "ply": 14,
+      "raw_engine_id": "5a6220d6dc8c028f"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:28.443245+00:00",
+      "elapsed_ms": 146,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "rnbq1rk1/1pp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/5PPP/R1B1KB1R b KQ - 1 8",
+      "fen_before": "rnbq1rk1/1pp1bppp/4pn2/p2p4/1PPP4/P1N1PN2/5PPP/R1BQKB1R w KQ - 0 8",
+      "move_uci": "d1a4",
+      "ply": 15,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:28.652285+00:00",
+      "elapsed_ms": 204,
+      "engine_id": "deepseek-deepseek-v4-flash/v1",
+      "fen_after": "1nbq1rk1/rpp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/5PPP/R1B1KB1R w KQ - 2 9",
+      "fen_before": "rnbq1rk1/1pp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/5PPP/R1B1KB1R b KQ - 1 8",
+      "move_uci": "a8a7",
+      "ply": 16,
+      "raw_engine_id": "5a6220d6dc8c028f"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:29.084552+00:00",
+      "elapsed_ms": 429,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "1nbq1rk1/rpp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/3B1PPP/R3KB1R b KQ - 3 9",
+      "fen_before": "1nbq1rk1/rpp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/5PPP/R1B1KB1R w KQ - 2 9",
+      "move_uci": "c1d2",
+      "ply": 17,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:29.294823+00:00",
+      "elapsed_ms": 206,
+      "engine_id": "deepseek-deepseek-v4-flash/v1",
+      "fen_after": "1nbq1rk1/1pp1bppp/r3pn2/p2p4/QPPP4/P1N1PN2/3B1PPP/R3KB1R w KQ - 4 10",
+      "fen_before": "1nbq1rk1/rpp1bppp/4pn2/p2p4/QPPP4/P1N1PN2/3B1PPP/R3KB1R b KQ - 3 9",
+      "move_uci": "a7a6",
+      "ply": 18,
+      "raw_engine_id": "5a6220d6dc8c028f"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:19:29.504214+00:00",
+      "elapsed_ms": 203,
+      "engine_id": "gemini-gemini-3-flash-preview/v1",
+      "fen_after": "1nbq1rk1/1pp1bppp/r3pn2/pP1p4/Q1PP4/P1N1PN2/3B1PPP/R3KB1R b KQ - 0 10",
+      "fen_before": "1nbq1rk1/1pp1bppp/r3pn2/p2p4/QPPP4/P1N1PN2/3B1PPP/R3KB1R w KQ - 4 10",
+      "move_uci": "b4b5",
+      "ply": 19,
+      "raw_engine_id": "d2b7107ab9d96a9a"
+    }
+  ],
+  "opening_fen": "rnbq1rk1/ppp2ppp/4pn2/3p4/1bPP4/P1N1PN2/1P3PPP/R1BQKB1R b KQ - 0 6",
+  "opening_label": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 ...",
+  "opening_moves": [
+    "d2d4",
+    "g8f6",
+    "c2c4",
+    "e7e6",
+    "b1c3",
+    "f8b4",
+    "e2e3",
+    "e8g8",
+    "g1f3",
+    "d7d5",
+    "a2a3"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:872",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"gemini-gemini-3-flash-preview/v1\"]\n[Black \"deepseek-deepseek-v4-flash/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:200\"]\n[FEN \"rnbq1rk1/ppp2ppp/4pn2/3p4/1bPP4/P1N1PN2/1P3PPP/R1BQKB1R b KQ - 0 6\"]\n[SetUp \"1\"]\n[Opening \"d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1f3 d7d5 a2a3\"]\n[OpeningSource \"competition/openings.txt:872\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n6... Be7 7. b4 a5 8. Qa4 Ra7 9. Bd2 Ra6 10. b5 *\n",
+  "plies": 8,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:19:27.361482+00:00",
+  "started_at": "2026-05-11T00:19:27.362809+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "gemini-gemini-3-flash-preview/v1",
+  "white_label": "Gemini 3 Flash Preview",
+  "white_name": "gemini-gemini-3-flash-preview/v1",
+  "white_provider": "gemini",
+  "white_raw_engine_id": "d2b7107ab9d96a9a",
+  "winner_engine_id": "gemini-gemini-3-flash-preview/v1"
+}

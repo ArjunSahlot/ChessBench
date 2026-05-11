@@ -1,0 +1,123 @@
+{
+  "avg_elapsed_ms": 486.0,
+  "black_clock_ms": null,
+  "black_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "black_label": "Deepseek V4 Pro",
+  "black_name": "deepseek-deepseek-v4-pro/v1",
+  "black_provider": "deepseek",
+  "black_raw_engine_id": "c9a7e2b6f7f9d19e",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [
+    {
+      "created_at": "2026-05-11T00:38:24.370373+00:00",
+      "engine_id": null,
+      "message": "timed out waiting for engine output",
+      "raw_engine_id": null
+    }
+  ],
+  "finished_at": "2026-05-11T00:38:24.374293+00:00",
+  "forfeiting_engine_id": "deepseek-deepseek-v4-pro/v1",
+  "game_id": "4366130d24b44dec962f84e20c4a97a4",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": "converted failed game to forfeit from recorded UCI/error events",
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:38:13.876743+00:00",
+      "elapsed_ms": 485,
+      "engine_id": "deepseek-deepseek-v4-pro/v1",
+      "fen_after": "r1b1k2r/pppnqppp/2n1p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR w KQkq - 1 8",
+      "fen_before": "rnb1k2r/pppnqppp/4p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR b KQkq - 0 7",
+      "move_uci": "b8c6",
+      "ply": 14,
+      "raw_engine_id": "c9a7e2b6f7f9d19e"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T00:38:14.367174+00:00",
+      "elapsed_ms": 487,
+      "engine_id": "anthropic-claude-opus-4-7/v1",
+      "fen_after": "r1b1k2r/pppnqppp/2n1p3/3pP3/3P1P2/2N2N2/PPP3PP/R2QKB1R b KQkq - 2 8",
+      "fen_before": "r1b1k2r/pppnqppp/2n1p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR w KQkq - 1 8",
+      "move_uci": "g1f3",
+      "ply": 15,
+      "raw_engine_id": "db56b5ef1dff9918"
+    }
+  ],
+  "opening_fen": "rnb1k2r/pppnqppp/4p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR b KQkq - 0 7",
+  "opening_label": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 ...",
+  "opening_moves": [
+    "e2e4",
+    "e7e6",
+    "d2d4",
+    "d7d5",
+    "b1c3",
+    "g8f6",
+    "c1g5",
+    "f8e7",
+    "e4e5",
+    "f6d7",
+    "g5e7",
+    "d8e7",
+    "f2f4"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:2465",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"anthropic-claude-opus-4-7/v1\"]\n[Black \"deepseek-deepseek-v4-pro/v1\"]\n[Result \"*\"]\n[TimeControl \"movetime:500\"]\n[FEN \"rnb1k2r/pppnqppp/4p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR b KQkq - 0 7\"]\n[SetUp \"1\"]\n[Opening \"e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4\"]\n[OpeningSource \"competition/openings.txt:2465\"]\n[Termination \"error: timed out waiting for engine output\"]\n\n7... Nc6 8. Nf3 *\n",
+  "plies": 2,
+  "reason": "migrated forfeit: timed out waiting for engine output",
+  "result": "1-0",
+  "result_source": "migrated_forfeit",
+  "scheduled_at": "2026-05-11T00:38:13.155368+00:00",
+  "started_at": "2026-05-11T00:38:13.156725+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 500
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "anthropic-claude-opus-4-7/v1",
+  "white_label": "Claude Opus 4 7",
+  "white_name": "anthropic-claude-opus-4-7/v1",
+  "white_provider": "anthropic",
+  "white_raw_engine_id": "db56b5ef1dff9918",
+  "winner_engine_id": "anthropic-claude-opus-4-7/v1"
+}

@@ -1,0 +1,154 @@
+{
+  "avg_elapsed_ms": 172.8,
+  "black_clock_ms": null,
+  "black_engine_id": "openai-gpt-5.4-mini/v1",
+  "black_label": "GPT-5.4 Mini",
+  "black_name": "openai-gpt-5.4-mini/v1",
+  "black_provider": "openai",
+  "black_raw_engine_id": "2df6b37f42533a91",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T01:34:54.899205+00:00",
+  "forfeiting_engine_id": "openai-gpt-5.4-mini/v1",
+  "game_id": "a6f1e4880d5e4ae5bf3c09e0b0788468",
+  "is_draw": false,
+  "is_forfeit": true,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:53.696881+00:00",
+      "elapsed_ms": 56,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqkbnr/1pp2ppp/4p3/p7/3Pp3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5",
+      "fen_before": "rnbqkbnr/ppp2ppp/4p3/8/3Pp3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4",
+      "move_uci": "a7a5",
+      "ply": 8,
+      "raw_engine_id": "2df6b37f42533a91"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:53.938693+00:00",
+      "elapsed_ms": 237,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbqkbnr/1pp2ppp/4p3/p7/3PN3/4B3/PPP2PPP/R2QKBNR b KQkq - 0 5",
+      "fen_before": "rnbqkbnr/1pp2ppp/4p3/p7/3Pp3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5",
+      "move_uci": "c3e4",
+      "ply": 9,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:54.048096+00:00",
+      "elapsed_ms": 105,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqkbnr/1pp2p1p/4p3/p5p1/3PN3/4B3/PPP2PPP/R2QKBNR w KQkq - 0 6",
+      "fen_before": "rnbqkbnr/1pp2ppp/4p3/p7/3PN3/4B3/PPP2PPP/R2QKBNR b KQkq - 0 5",
+      "move_uci": "g7g5",
+      "ply": 10,
+      "raw_engine_id": "2df6b37f42533a91"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:54.293688+00:00",
+      "elapsed_ms": 240,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbqkbnr/1pp2p1p/4p3/p5p1/3PN3/2P1B3/PP3PPP/R2QKBNR b KQkq - 0 6",
+      "fen_before": "rnbqkbnr/1pp2p1p/4p3/p5p1/3PN3/4B3/PPP2PPP/R2QKBNR w KQkq - 0 6",
+      "move_uci": "c2c3",
+      "ply": 11,
+      "raw_engine_id": "24aef16cc478c0f8"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:54.457345+00:00",
+      "elapsed_ms": 158,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqkbnr/1pp4p/4p3/p4pp1/3PN3/2P1B3/PP3PPP/R2QKBNR w KQkq - 0 7",
+      "fen_before": "rnbqkbnr/1pp2p1p/4p3/p5p1/3PN3/2P1B3/PP3PPP/R2QKBNR b KQkq - 0 6",
+      "move_uci": "f7f5",
+      "ply": 12,
+      "raw_engine_id": "2df6b37f42533a91"
+    },
+    {
+      "clock_ms": null,
+      "created_at": "2026-05-11T01:34:54.702690+00:00",
+      "elapsed_ms": 241,
+      "engine_id": "megalodon/example",
+      "fen_after": "rnbqkbnr/1pp4p/4p3/p4ppQ/3PN3/2P1B3/PP3PPP/R3KBNR b KQkq - 1 7",
+      "fen_before": "rnbqkbnr/1pp4p/4p3/p4pp1/3PN3/2P1B3/PP3PPP/R2QKBNR w KQkq - 0 7",
+      "move_uci": "d1h5",
+      "ply": 13,
+      "raw_engine_id": "24aef16cc478c0f8"
+    }
+  ],
+  "opening_fen": "rnbqkbnr/ppp2ppp/4p3/8/3Pp3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4",
+  "opening_label": "d2d4 d7d5 e2e4 d5e4 b1c3 e7e6 ...",
+  "opening_moves": [
+    "d2d4",
+    "d7d5",
+    "e2e4",
+    "d5e4",
+    "b1c3",
+    "e7e6",
+    "c1e3"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:522",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"megalodon/example\"]\n[Black \"openai-gpt-5.4-mini/v1\"]\n[Result \"1-0\"]\n[TimeControl \"movetime:200\"]\n[FEN \"rnbqkbnr/ppp2ppp/4p3/8/3Pp3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4\"]\n[SetUp \"1\"]\n[Opening \"d2d4 d7d5 e2e4 d5e4 b1c3 e7e6 c1e3\"]\n[OpeningSource \"competition/openings.txt:522\"]\n[Termination \"illegal move f5f4\"]\n\n4... a5 5. Nxe4 g5 6. c3 f5 7. Qh5+ 1-0\n",
+  "plies": 6,
+  "reason": "illegal move f5f4",
+  "result": "1-0",
+  "result_source": "forfeit",
+  "scheduled_at": "2026-05-11T01:34:53.395887+00:00",
+  "started_at": "2026-05-11T01:34:53.398103+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 0,
+    "init_ms": null,
+    "move_overhead_ms": 20,
+    "movetime_ms": 200
+  },
+  "white_clock_ms": null,
+  "white_engine_id": "megalodon/example",
+  "white_label": "Megalodon",
+  "white_name": "megalodon/example",
+  "white_provider": "megalodon",
+  "white_raw_engine_id": "24aef16cc478c0f8",
+  "winner_engine_id": "megalodon/example"
+}

@@ -1,0 +1,234 @@
+{
+  "avg_elapsed_ms": 1538.7,
+  "black_clock_ms": 56245,
+  "black_engine_id": "openai-gpt-5.4-mini/v1",
+  "black_label": "GPT-5.4 Mini",
+  "black_name": "openai-gpt-5.4-mini/v1",
+  "black_provider": "openai",
+  "black_raw_engine_id": "7b546e02e7f94e6b",
+  "config": {
+    "generations_root": "generations",
+    "handshake_timeout_seconds": 5.0,
+    "max_plies": 240,
+    "move_timeout_seconds": 10.0,
+    "openings_file": "competition/openings.txt",
+    "poll_seconds": 5.0,
+    "results_db": "results/competition.sqlite3",
+    "time_controls": [
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 50
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 200
+      },
+      {
+        "increment_ms": 0,
+        "init_ms": null,
+        "move_overhead_ms": 20,
+        "movetime_ms": 500
+      },
+      {
+        "increment_ms": 500,
+        "init_ms": 60000,
+        "move_overhead_ms": 20,
+        "movetime_ms": 100
+      }
+    ]
+  },
+  "detail_available": true,
+  "errors": [],
+  "finished_at": "2026-05-11T00:43:51.945364+00:00",
+  "forfeiting_engine_id": null,
+  "game_id": "9fe05b62ef34424ea80f0d563ca0dca9",
+  "is_draw": false,
+  "is_forfeit": false,
+  "migration_note": null,
+  "moves": [
+    {
+      "clock_ms": 58101,
+      "created_at": "2026-05-11T00:43:34.262537+00:00",
+      "elapsed_ms": 2379,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nr/pp1pp2p/6p1/2pP1pB1/2P5/2P5/P3PPPP/R2QKBNR b KQkq - 1 6",
+      "fen_before": "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6",
+      "move_uci": "c1g5",
+      "ply": 11,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 60377,
+      "created_at": "2026-05-11T00:43:34.370906+00:00",
+      "elapsed_ms": 103,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nr/1p1pp2p/p5p1/2pP1pB1/2P5/2P5/P3PPPP/R2QKBNR w KQkq - 0 7",
+      "fen_before": "rnbqk1nr/pp1pp2p/6p1/2pP1pB1/2P5/2P5/P3PPPP/R2QKBNR b KQkq - 1 6",
+      "move_uci": "a7a6",
+      "ply": 12,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 56267,
+      "created_at": "2026-05-11T00:43:36.688697+00:00",
+      "elapsed_ms": 2314,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nr/1p1pp2p/p5p1/2pP1pB1/2P5/2P2N2/P3PPPP/R2QKB1R b KQkq - 1 7",
+      "fen_before": "rnbqk1nr/1p1pp2p/p5p1/2pP1pB1/2P5/2P5/P3PPPP/R2QKBNR w KQkq - 0 7",
+      "move_uci": "g1f3",
+      "ply": 13,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 59996,
+      "created_at": "2026-05-11T00:43:37.553044+00:00",
+      "elapsed_ms": 861,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nr/1p1pp3/p5pp/2pP1pB1/2P5/2P2N2/P3PPPP/R2QKB1R w KQkq - 0 8",
+      "fen_before": "rnbqk1nr/1p1pp2p/p5p1/2pP1pB1/2P5/2P2N2/P3PPPP/R2QKB1R b KQkq - 1 7",
+      "move_uci": "h7h6",
+      "ply": 14,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 54492,
+      "created_at": "2026-05-11T00:43:39.811558+00:00",
+      "elapsed_ms": 2255,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nr/1p1pp3/p5pp/2pP1p2/2P5/2P1BN2/P3PPPP/R2QKB1R b KQkq - 1 8",
+      "fen_before": "rnbqk1nr/1p1pp3/p5pp/2pP1pB1/2P5/2P2N2/P3PPPP/R2QKB1R w KQkq - 0 8",
+      "move_uci": "g5e3",
+      "ply": 15,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 60209,
+      "created_at": "2026-05-11T00:43:40.083199+00:00",
+      "elapsed_ms": 267,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nr/3pp3/p5pp/1ppP1p2/2P5/2P1BN2/P3PPPP/R2QKB1R w KQkq - 0 9",
+      "fen_before": "rnbqk1nr/1p1pp3/p5pp/2pP1p2/2P5/2P1BN2/P3PPPP/R2QKB1R b KQkq - 1 8",
+      "move_uci": "b7b5",
+      "ply": 16,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 52778,
+      "created_at": "2026-05-11T00:43:42.283706+00:00",
+      "elapsed_ms": 2194,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nr/3pp3/p5pp/1pBP1p2/2P5/2P2N2/P3PPPP/R2QKB1R b KQkq - 0 9",
+      "fen_before": "rnbqk1nr/3pp3/p5pp/1ppP1p2/2P5/2P1BN2/P3PPPP/R2QKB1R w KQkq - 0 9",
+      "move_uci": "e3c5",
+      "ply": 17,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 59112,
+      "created_at": "2026-05-11T00:43:43.864666+00:00",
+      "elapsed_ms": 1577,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nr/3pp3/p5p1/1pBP1p1p/2P5/2P2N2/P3PPPP/R2QKB1R w KQkq - 0 10",
+      "fen_before": "rnbqk1nr/3pp3/p5pp/1pBP1p2/2P5/2P2N2/P3PPPP/R2QKB1R b KQkq - 0 9",
+      "move_uci": "h6h5",
+      "ply": 18,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 51120,
+      "created_at": "2026-05-11T00:43:46.005794+00:00",
+      "elapsed_ms": 2138,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nr/3pp3/p5p1/1pBP1p1p/2PQ4/2P2N2/P3PPPP/R3KB1R b KQkq - 1 10",
+      "fen_before": "rnbqk1nr/3pp3/p5p1/1pBP1p1p/2P5/2P2N2/P3PPPP/R2QKB1R w KQkq - 0 10",
+      "move_uci": "d1d4",
+      "ply": 19,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 57571,
+      "created_at": "2026-05-11T00:43:48.033530+00:00",
+      "elapsed_ms": 2021,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nr/3p4/p3p1p1/1pBP1p1p/2PQ4/2P2N2/P3PPPP/R3KB1R w KQkq - 0 11",
+      "fen_before": "rnbqk1nr/3pp3/p5p1/1pBP1p1p/2PQ4/2P2N2/P3PPPP/R3KB1R b KQkq - 1 10",
+      "move_uci": "e7e6",
+      "ply": 20,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 49513,
+      "created_at": "2026-05-11T00:43:50.124829+00:00",
+      "elapsed_ms": 2087,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1nQ/3p4/p3p1p1/1pBP1p1p/2P5/2P2N2/P3PPPP/R3KB1R b KQq - 0 11",
+      "fen_before": "rnbqk1nr/3p4/p3p1p1/1pBP1p1p/2PQ4/2P2N2/P3PPPP/R3KB1R w KQkq - 0 11",
+      "move_uci": "d4h8",
+      "ply": 21,
+      "raw_engine_id": "632e3da7a71b792e"
+    },
+    {
+      "clock_ms": 56245,
+      "created_at": "2026-05-11T00:43:51.937434+00:00",
+      "elapsed_ms": 1806,
+      "engine_id": "openai-gpt-5.4-mini/v1",
+      "fen_after": "rnbqk1nQ/3p4/4p1p1/ppBP1p1p/2P5/2P2N2/P3PPPP/R3KB1R w KQq - 0 12",
+      "fen_before": "rnbqk1nQ/3p4/p3p1p1/1pBP1p1p/2P5/2P2N2/P3PPPP/R3KB1R b KQq - 0 11",
+      "move_uci": "a6a5",
+      "ply": 22,
+      "raw_engine_id": "7b546e02e7f94e6b"
+    },
+    {
+      "clock_ms": 49992,
+      "created_at": "2026-05-11T00:43:51.943468+00:00",
+      "elapsed_ms": 1,
+      "engine_id": "openai-gpt-5.5/v1",
+      "fen_after": "rnbqk1Q1/3p4/4p1p1/ppBP1p1p/2P5/2P2N2/P3PPPP/R3KB1R b KQq - 0 12",
+      "fen_before": "rnbqk1nQ/3p4/4p1p1/ppBP1p1p/2P5/2P2N2/P3PPPP/R3KB1R w KQq - 0 12",
+      "move_uci": "h8g8",
+      "ply": 23,
+      "raw_engine_id": "632e3da7a71b792e"
+    }
+  ],
+  "opening_fen": "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6",
+  "opening_label": "c2c4 g7g6 b1c3 f8g7 d2d4 c7c5 ...",
+  "opening_moves": [
+    "c2c4",
+    "g7g6",
+    "b1c3",
+    "f8g7",
+    "d2d4",
+    "c7c5",
+    "d4d5",
+    "g7c3",
+    "b2c3",
+    "f7f5"
+  ],
+  "opening_skip_reason": "",
+  "opening_source": "competition/openings.txt:152",
+  "pgn": "[Event \"LLM Chess Engines Round Robin\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"openai-gpt-5.5/v1\"]\n[Black \"openai-gpt-5.4-mini/v1\"]\n[Result \"1-0\"]\n[TimeControl \"clock:60000+500\"]\n[FEN \"rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6\"]\n[SetUp \"1\"]\n[Opening \"c2c4 g7g6 b1c3 f8g7 d2d4 c7c5 d4d5 g7c3 b2c3 f7f5\"]\n[OpeningSource \"competition/openings.txt:152\"]\n[Termination \"checkmate\"]\n\n6. Bg5 a6 7. Nf3 h6 8. Be3 b5 9. Bxc5 h5 10. Qd4 e6 11. Qxh8 a5 12. Qxg8# 1-0\n",
+  "plies": 13,
+  "reason": "checkmate",
+  "result": "1-0",
+  "result_source": "game",
+  "scheduled_at": "2026-05-11T00:43:31.745345+00:00",
+  "started_at": "2026-05-11T00:43:31.746951+00:00",
+  "status": "finished",
+  "time_control": {
+    "increment_ms": 500,
+    "init_ms": 60000,
+    "move_overhead_ms": 20,
+    "movetime_ms": 100
+  },
+  "white_clock_ms": 49992,
+  "white_engine_id": "openai-gpt-5.5/v1",
+  "white_label": "GPT-5.5",
+  "white_name": "openai-gpt-5.5/v1",
+  "white_provider": "openai",
+  "white_raw_engine_id": "632e3da7a71b792e",
+  "winner_engine_id": "openai-gpt-5.5/v1"
+}
