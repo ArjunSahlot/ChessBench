@@ -40,10 +40,17 @@ create table if not exists public.chessbench_games (
   forfeiting_raw_engine_id text references public.chessbench_engines(raw_engine_id),
   forfeiting_engine_id text,
   migration_note text,
+  plies integer not null default 0,
+  avg_elapsed_ms numeric,
   updated_at timestamptz not null default now(),
   constraint chessbench_games_result_check
     check (result is null or result in ('1-0', '0-1', '1/2-1/2', '*'))
 );
+
+alter table public.chessbench_games
+  add column if not exists plies integer not null default 0;
+alter table public.chessbench_games
+  add column if not exists avg_elapsed_ms numeric;
 
 create table if not exists public.chessbench_moves (
   game_id text not null references public.chessbench_games(game_id) on delete cascade,
@@ -120,6 +127,8 @@ create table if not exists public.chessbench_leaderboard_entries (
 
 create index if not exists chessbench_games_finished_idx
   on public.chessbench_games (finished_at desc nulls last);
+create index if not exists chessbench_games_plies_idx
+  on public.chessbench_games (plies desc, finished_at desc nulls last);
 create index if not exists chessbench_games_white_idx
   on public.chessbench_games (white_engine_id);
 create index if not exists chessbench_games_black_idx
@@ -134,6 +143,18 @@ create index if not exists chessbench_moves_game_ply_idx
   on public.chessbench_moves (game_id, ply);
 create index if not exists chessbench_leaderboard_rank_idx
   on public.chessbench_leaderboard_entries (snapshot_id, rank);
+
+update public.chessbench_games game
+set
+  plies = coalesce(stats.plies, 0),
+  avg_elapsed_ms = stats.avg_elapsed_ms
+from (
+  select game_id, count(*)::integer as plies, round(avg(elapsed_ms), 1) as avg_elapsed_ms
+  from public.chessbench_moves
+  group by game_id
+) stats
+where stats.game_id = game.game_id
+  and (game.plies = 0 or game.avg_elapsed_ms is null);
 
 create or replace view public.chessbench_latest_snapshot as
 select snapshot_id, generated_at, anchors, synced_at
@@ -212,16 +233,11 @@ select
     from public.chessbench_game_errors err
     where err.game_id = game.game_id
   ) as has_error,
-  coalesce(move_stats.plies, 0) as plies,
-  move_stats.avg_elapsed_ms
+  game.plies,
+  game.avg_elapsed_ms
 from public.chessbench_games game
 join public.chessbench_engines white on white.raw_engine_id = game.white_raw_engine_id
 join public.chessbench_engines black on black.raw_engine_id = game.black_raw_engine_id
-left join lateral (
-  select count(*)::integer as plies, round(avg(elapsed_ms), 1) as avg_elapsed_ms
-  from public.chessbench_moves move
-  where move.game_id = game.game_id
-) move_stats on true
 where game.status != 'ignored';
 
 create or replace view public.chessbench_moves_public as

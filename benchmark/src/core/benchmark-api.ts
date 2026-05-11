@@ -65,32 +65,36 @@ export async function fetchGames(params: {
   const supabase = client();
   const from = params.offset ?? 0;
   const to = from + (params.limit ?? 50) - 1;
-  let query = supabase
-    .from("chessbench_games_public")
-    .select("*", { count: "exact" })
-    .order("plies", { ascending: false, nullsFirst: false })
-    .order("finished_at", { ascending: false, nullsFirst: false })
-    .range(from, to);
+  const makeQuery = (sortByPlies: boolean) => {
+    let query = supabase.from("chessbench_games_public").select("*", { count: "exact" });
+    if (sortByPlies) {
+      query = query.order("plies", { ascending: false, nullsFirst: false });
+    }
+    query = query.order("finished_at", { ascending: false, nullsFirst: false }).range(from, to);
 
-  if (params.model && params.model !== "all") {
-    query = query.contains("participants", [params.model]);
-  }
-  if (params.opponent && params.opponent !== "all") {
-    query = query.contains("participants", [params.opponent]);
-  }
-  if (params.result && params.result !== "all") {
-    if (params.result === "draws") query = query.eq("result", "1/2-1/2");
-    if (params.result === "decisive") query = query.in("result", ["1-0", "0-1"]);
-    if (params.result === "forfeits") query = query.ilike("result_source", "%forfeit%");
-  }
-  if (params.search?.trim()) {
-    const text = params.search.trim().replaceAll(",", " ");
-    query = query.or(
-      `white_name.ilike.%${text}%,black_name.ilike.%${text}%,reason.ilike.%${text}%,game_id.ilike.%${text}%`,
-    );
-  }
+    if (params.model && params.model !== "all") {
+      query = query.contains("participants", [params.model]);
+    }
+    if (params.opponent && params.opponent !== "all") {
+      query = query.contains("participants", [params.opponent]);
+    }
+    if (params.result && params.result !== "all") {
+      if (params.result === "draws") query = query.eq("result", "1/2-1/2");
+      if (params.result === "decisive") query = query.in("result", ["1-0", "0-1"]);
+      if (params.result === "forfeits") query = query.ilike("result_source", "%forfeit%");
+    }
+    if (params.search?.trim()) {
+      const text = params.search.trim().replaceAll(",", " ");
+      query = query.or(`white_name.ilike.%${text}%,black_name.ilike.%${text}%,reason.ilike.%${text}%,game_id.ilike.%${text}%`);
+    }
+    return query;
+  };
 
-  const { data, count, error } = await query;
+  let { data, count, error } = await makeQuery(true);
+  if (error?.message.toLowerCase().includes("timeout")) {
+    ({ data, count, error } = await makeQuery(false));
+    data = [...(data ?? [])].sort((a, b) => Number(b.plies ?? 0) - Number(a.plies ?? 0));
+  }
   if (error) throw error;
   return { games: (data ?? []) as GameSummary[], count: count ?? 0 };
 }

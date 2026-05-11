@@ -195,6 +195,8 @@ def sync_games(
                     else None
                 ),
                 "migration_note": row["migration_note"],
+                "plies": row["plies"] if "plies" in row.keys() else count_moves(db, row["game_id"]),
+                "avg_elapsed_ms": row["avg_elapsed_ms"] if "avg_elapsed_ms" in row.keys() else average_elapsed_ms(db, row["game_id"]),
             }
         )
     upsert_batches(client, "chessbench_games", game_rows, "game_id", batch_size)
@@ -223,6 +225,16 @@ def sync_moves(
             }
         )
     upsert_batches(client, "chessbench_moves", move_rows, "game_id,ply", batch_size)
+
+
+def count_moves(db: sqlite3.Connection, game_id: str) -> int:
+    row = db.execute("SELECT COUNT(*) AS n FROM moves WHERE game_id=?", (game_id,)).fetchone()
+    return int(row["n"] or 0)
+
+
+def average_elapsed_ms(db: sqlite3.Connection, game_id: str) -> float | None:
+    row = db.execute("SELECT ROUND(AVG(elapsed_ms), 1) AS avg_ms FROM moves WHERE game_id=?", (game_id,)).fetchone()
+    return row["avg_ms"] if row is not None else None
 
 
 def sync_game_errors(

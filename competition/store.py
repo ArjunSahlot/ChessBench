@@ -128,6 +128,26 @@ class CompetitionStore:
             self._add_column("games", "result_source", "TEXT")
             self._add_column("games", "forfeiting_engine_id", "TEXT")
             self._add_column("games", "migration_note", "TEXT")
+            self._add_column("games", "plies", "INTEGER NOT NULL DEFAULT 0")
+            self._add_column("games", "avg_elapsed_ms", "REAL")
+            self.db.execute(
+                """
+                UPDATE games
+                SET
+                    plies = (
+                        SELECT COUNT(*)
+                        FROM moves
+                        WHERE moves.game_id = games.game_id
+                    ),
+                    avg_elapsed_ms = (
+                        SELECT ROUND(AVG(elapsed_ms), 1)
+                        FROM moves
+                        WHERE moves.game_id = games.game_id
+                    )
+                WHERE plies = 0
+                  AND EXISTS (SELECT 1 FROM moves WHERE moves.game_id = games.game_id)
+                """
+            )
             self.db.commit()
 
     def _add_column(self, table: str, name: str, kind: str) -> None:
@@ -265,6 +285,24 @@ class CompetitionStore:
             """,
             (game_id, ply, engine_id, move_uci, fen_before, fen_after, elapsed_ms, clock_ms, now_iso()),
         )
+            self.db.execute(
+                """
+                UPDATE games
+                SET
+                    plies = (
+                        SELECT COUNT(*)
+                        FROM moves
+                        WHERE moves.game_id = ?
+                    ),
+                    avg_elapsed_ms = (
+                        SELECT ROUND(AVG(elapsed_ms), 1)
+                        FROM moves
+                        WHERE moves.game_id = ?
+                    )
+                WHERE game_id = ?
+                """,
+                (game_id, game_id, game_id),
+            )
             self.db.commit()
 
     def record_uci(self, game_id: str, engine_id: str, direction: str, line: str) -> None:
