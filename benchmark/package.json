@@ -5,9 +5,8 @@
   "description": "Public benchmark site for ChessBench ELO results and games.",
   "type": "module",
   "scripts": {
-    "dev": "python3 scripts/export_static_data.py && next dev --hostname 0.0.0.0",
-    "build": "python3 scripts/export_static_data.py && next build",
-    "export:data": "python3 scripts/export_static_data.py",
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
     "sync:supabase": "python3 scripts/sync_supabase.py",
     "lint": "next lint"
   },

@@ -22,4 +22,4 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 py-modules = ["main", "leaderboard_tui"]
-packages = ["adapters", "competition", "harness", "tools"]
+packages = ["adapters", "benchmark", "benchmark.scripts", "competition", "harness", "tools"]

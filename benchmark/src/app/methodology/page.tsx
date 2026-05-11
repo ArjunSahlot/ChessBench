@@ -1,90 +1,88 @@
-import { ArrowRight, Braces, CheckCircle2, Code2, Database, Gauge, Swords } from "lucide-react";
-import Link from "next/link";
+import { Braces, Code2, Hammer, MessageSquareText, Swords, Timer, Wrench } from "lucide-react";
 
-import { MethodologyFlow } from "@/components/MethodologyFlow";
 import { SiteNav } from "@/components/SiteNav";
-import { formatDate, formatInteger } from "@/lib/format";
-import { getSiteData } from "@/lib/static-data";
 
 export default function MethodologyPage() {
-  const site = getSiteData();
-
   return (
     <>
       <SiteNav />
       <main className="method-page page-pad">
-        <section className="method-hero">
+        <section className="method-hero focused">
           <div>
             <p className="eyebrow">Benchmark methodology</p>
-            <h1>From generated code to public ELO</h1>
+            <h1>How ChessBench evaluates model-built engines</h1>
             <p>
-              ChessBench asks models to produce chess engines, compiles the generated projects, runs a persistent
-              round-robin competition, and publishes the tournament trail behind every rating.
+              Each model is evaluated as an autonomous coding agent. It receives the same chess-engine objective, the
+              same tool interface, and the same turn budget, then its compiled engine is tested through actual games.
             </p>
-          </div>
-          <div className="method-stats" aria-label="Benchmark summary">
-            <div>
-              <span>Models</span>
-              <strong>{formatInteger(site.summary.models)}</strong>
-            </div>
-            <div>
-              <span>Raw engines</span>
-              <strong>{formatInteger(site.summary.raw_engines)}</strong>
-            </div>
-            <div>
-              <span>Latest game</span>
-              <strong>{formatDate(site.summary.latest_finished_at)}</strong>
-            </div>
           </div>
         </section>
 
-        <MethodologyFlow summary={site.summary} />
+        <section className="prompt-panel">
+          <div>
+            <p className="eyebrow">System prompt</p>
+            <h2>Build the strongest chess engine you can.</h2>
+            <p>
+              The prompt requires a C++ UCI engine that compiles with `make`, handles standard UCI commands, supports
+              timer-based play, and iterates by writing code, compiling, and fixing errors before the tool-call budget
+              expires.
+            </p>
+          </div>
+          <pre>{`Build the strongest chess engine you can.
+
+Requirements:
+- C++ engine
+- UCI protocol
+- Compiles with make
+- Handles uci, isready, ucinewgame, position, go, quit
+- Uses time controls
+
+Goal: create the highest ELO chess engine possible.`}</pre>
+        </section>
 
         <section className="method-grid">
           <MethodCard
-            icon={<Code2 />}
-            title="Generation contract"
-            body="Each run is isolated under generations/provider-model/run-id. The model writes a C++ engine with a root Makefile through confined file tools, then the harness compiles it."
+            icon={<MessageSquareText />}
+            title="Same context"
+            body="Every run starts with the same system prompt and a direct user request to generate the engine, write source files, compile, and fix build errors."
           />
           <MethodCard
-            icon={<CheckCircle2 />}
-            title="Engine discovery"
-            body="Compiled engines are discovered from the local generation tree and registered with provider, model, run id, root, command, manifest, and timestamps."
+            icon={<Wrench />}
+            title="Tool calling"
+            body="Agents can read files, write files, and invoke the compile tool inside an isolated generation workspace. They do not get arbitrary shell access."
+          />
+          <MethodCard
+            icon={<Timer />}
+            title="Turn budget"
+            body="Runs are bounded by a maximum number of model/tool turns. If the model has not produced a compiling UCI engine by then, that run is not tournament-ready."
+          />
+          <MethodCard
+            icon={<Hammer />}
+            title="Compile gate"
+            body="The generated project must include a root Makefile and pass compilation. The stored manifest records provider, model, run id, turns, status, and compile result."
           />
           <MethodCard
             icon={<Swords />}
-            title="Tournament scheduler"
-            body="The runner schedules least-played ordered pairings, randomizes openings from the book, validates legal moves with python-chess, and persists every move."
-          />
-          <MethodCard
-            icon={<Gauge />}
-            title="Clock discipline"
-            body="Games can use fixed movetime or clock plus increment. Time controls, clocks, move latencies, and termination reasons stay attached to each game."
+            title="Round-robin games"
+            body="Compiled engines are discovered offline and paired in a persistent competition runner. Moves are validated with python-chess and every move, clock, PGN, and error is stored."
           />
           <MethodCard
             icon={<Braces />}
-            title="ELO estimator"
-            body="Ratings are estimated from decisive and drawn results with optional anchors. Current public data is anchor-free, so the field floats around the default pool mean."
-          />
-          <MethodCard
-            icon={<Database />}
-            title="Publishing path"
-            body="The static site ships compact leaderboard data. Supabase stores the full game, move, error, capability, and leaderboard history for interactive browsing."
+            title="Rating calculation"
+            body="The leaderboard is built from head-to-head game results using the project ELO estimator, with optional anchor ratings for future calibration."
           />
         </section>
 
         <section className="schema-callout">
           <div>
-            <p className="eyebrow">Data model</p>
-            <h2>Built for static publishing and a full archive</h2>
+            <p className="eyebrow">Important interpretation</p>
+            <h2>This is not a chess model benchmark.</h2>
             <p>
-              Supabase mirrors the SQLite source of truth into normalized engine, game, move, error, capability, UCI,
-              and leaderboard tables. Public views join model metadata for fast client queries.
+              ChessBench measures whether a model can implement a strong chess engine under agentic coding constraints.
+              The game results evaluate the generated program, not the base model playing chess directly.
             </p>
           </div>
-          <Link className="primary-action" href="/games/">
-            Browse games <ArrowRight size={18} />
-          </Link>
+          <Code2 size={40} />
         </section>
       </main>
     </>

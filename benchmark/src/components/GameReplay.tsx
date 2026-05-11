@@ -15,8 +15,8 @@ import {
   ShieldAlert,
 } from "lucide-react";
 
-import { durationLabel, formatInteger, formatShortDate, resultLabel, timeControlLabel } from "@/lib/format";
-import type { GameDetail, ModelSummary, MoveRecord } from "@/lib/types";
+import { durationLabel, formatInteger, formatShortDate, modelLabel, providerLabel, resultLabel, timeControlLabel } from "@/core/format";
+import type { GameDetail, LeaderboardRow, MoveRecord } from "@/core/types";
 
 const START_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 const PIECES: Record<string, string> = {
@@ -52,7 +52,7 @@ type MovePair = {
   black?: ReplayMove;
 };
 
-export function GameReplay({ detail, models }: { detail: GameDetail; models: ModelSummary[] }) {
+export function GameReplay({ detail, models, loading = false }: { detail: GameDetail; models: LeaderboardRow[]; loading?: boolean }) {
   const [plyIndex, setPlyIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [flipped, setFlipped] = useState(false);
@@ -96,17 +96,28 @@ export function GameReplay({ detail, models }: { detail: GameDetail; models: Mod
     <div className="replay-layout">
       <div className="replay-main">
         <div className="match-card">
-          <PlayerPanel side="white" label={detail.white_label} elo={white?.elo} provider={white?.provider} />
+          <PlayerPanel
+            side="white"
+            label={modelLabel({ name: detail.white_name, provider_model: detail.white_provider_model })}
+            elo={white?.elo}
+            provider={detail.white_provider}
+          />
           <div className="match-score">
             <strong>{resultLabel(detail.result)}</strong>
             <span>{formatShortDate(detail.finished_at ?? detail.started_at ?? detail.scheduled_at)}</span>
           </div>
-          <PlayerPanel side="black" label={detail.black_label} elo={black?.elo} provider={black?.provider} />
+          <PlayerPanel
+            side="black"
+            label={modelLabel({ name: detail.black_name, provider_model: detail.black_provider_model })}
+            elo={black?.elo}
+            provider={detail.black_provider}
+          />
         </div>
 
         <ChessBoard fen={activeFen} flipped={flipped} lastMove={activeMove?.move_uci ?? ""} />
 
         <div className="transport-bar">
+          {loading && <span className="replay-loading-inline">Refreshing game data...</span>}
           <button title="First move" onClick={() => setPlyIndex(0)}>
             <ChevronsLeft size={18} />
           </button>
@@ -144,32 +155,31 @@ export function GameReplay({ detail, models }: { detail: GameDetail; models: Mod
         <div className="detail-stat-grid">
           <DetailStat icon={<Gauge size={17} />} label="Ply count" value={formatInteger(detail.plies)} />
           <DetailStat icon={<Clock3 size={17} />} label="Avg move" value={durationLabel(detail.avg_elapsed_ms)} />
-          <DetailStat icon={<ShieldAlert size={17} />} label="Source" value={detail.result_source ?? "game"} />
+          <DetailStat icon={<ShieldAlert size={17} />} label="Result" value={resultLabel(detail.result)} />
         </div>
 
         <div className="opening-panel">
-          <span>Opening</span>
-          <strong>{detail.opening_label}</strong>
-          <p>{detail.opening_skip_reason || `${replay.openingPlyCount} book plies before engine play.`}</p>
+          <span>Book phase</span>
+          <strong>{replay.openingPlyCount > 0 ? `${replay.openingPlyCount} opening plies` : "No opening book"}</strong>
+          <p>{detail.opening_skip_reason || "Opening moves are marked as book moves in the move list."}</p>
         </div>
 
         <div className="opening-panel">
           <span>Time control</span>
           <strong>{timeControlLabel(detail.time_control)}</strong>
-          <p>{detail.reason ?? "Game in progress"}</p>
+          <p>Final clocks: white {formatClock(detail.white_clock_ms)}, black {formatClock(detail.black_clock_ms)}.</p>
+        </div>
+
+        <div className="opening-panel">
+          <span>Termination</span>
+          <strong>{detail.reason ?? detail.status}</strong>
+          <p>{detail.result_source?.includes("forfeit") ? "This result was assigned by forfeit handling." : "This result came from completed game play."}</p>
         </div>
 
         {detail.errors.length > 0 && (
           <div className="error-panel">
             <ShieldAlert size={17} />
             <span>{detail.errors[0].message}</span>
-          </div>
-        )}
-
-        {!detail.detail_available && (
-          <div className="error-panel muted">
-            <ShieldAlert size={17} />
-            <span>This static snapshot has metadata only. Connect Supabase to replay every archived move.</span>
           </div>
         )}
 
@@ -204,11 +214,16 @@ function PlayerPanel({
       <div>
         <strong>{label}</strong>
         <small>
-          {provider ?? "engine"} / {elo ? `${elo} ELO` : "unrated"}
+          {providerLabel(provider)} / {elo ? `${elo} ELO` : "unrated"}
         </small>
       </div>
     </div>
   );
+}
+
+function formatClock(value: number | null | undefined): string {
+  if (value === null || value === undefined) return "n/a";
+  return `${(value / 1000).toFixed(1)}s`;
 }
 
 function DetailStat({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {

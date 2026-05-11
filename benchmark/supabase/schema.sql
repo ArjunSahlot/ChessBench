@@ -154,7 +154,27 @@ select
   snapshot.generated_at
 from public.chessbench_leaderboard_entries entry
 join public.chessbench_latest_snapshot snapshot using (snapshot_id)
-left join public.chessbench_engines engine on engine.canonical_engine_id = entry.engine_id;
+left join (
+  select distinct on (canonical_engine_id)
+    canonical_engine_id,
+    provider,
+    model,
+    manifest
+  from public.chessbench_engines
+  order by canonical_engine_id, last_seen_at desc
+) engine on engine.canonical_engine_id = entry.engine_id;
+
+create or replace view public.chessbench_summary_public as
+select
+  (select count(*)::integer from public.chessbench_games where status != 'ignored') as total_games,
+  (select count(*)::integer from public.chessbench_games where status = 'finished') as finished_games,
+  (select count(*)::integer from public.chessbench_moves) as moves,
+  (
+    select count(*)::integer
+    from public.chessbench_leaderboard_public
+    where provider not in ('stockfish', 'megalodon')
+  ) as llm_models,
+  (select max(finished_at) from public.chessbench_games where status = 'finished') as latest_finished_at;
 
 create or replace view public.chessbench_games_public as
 select
@@ -259,6 +279,7 @@ grant select on
   public.chessbench_leaderboard_entries,
   public.chessbench_latest_snapshot,
   public.chessbench_leaderboard_public,
+  public.chessbench_summary_public,
   public.chessbench_games_public,
   public.chessbench_moves_public,
   public.chessbench_game_errors_public

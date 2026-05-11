@@ -60,6 +60,13 @@ def build_parser() -> argparse.ArgumentParser:
     )
     leaderboard.add_argument("--no-tui", action="store_true", help="Write leaderboard files without opening the TUI.")
 
+    sync_supabase = subparsers.add_parser("sync-supabase", help="Sync local SQLite competition results to Supabase.")
+    sync_supabase.add_argument("--db", type=Path, default=Path("results/competition.sqlite3"))
+    sync_supabase.add_argument("--leaderboard", type=Path, default=Path("results/elo_leaderboard.json"))
+    sync_supabase.add_argument("--batch-size", type=int, default=500)
+    sync_supabase.add_argument("--dry-run", action="store_true")
+    sync_supabase.add_argument("--include-uci", action="store_true", help="Also sync raw UCI event lines.")
+
     migrate = subparsers.add_parser("migrate-results", help="Migrate legacy failed games into explicit forfeit/ignored results.")
     migrate.add_argument("--results-db", type=Path, default=Path("results/competition.sqlite3"))
     migrate.add_argument("--no-backup", action="store_true", help="Do not write a timestamped SQLite backup before migrating.")
@@ -132,6 +139,22 @@ def main() -> int:
         print(f"ignored failed games: {summary.ignored_failed_games}")
         print(f"annotated finished games: {summary.annotated_finished_games}")
         return 0
+    if args.command == "sync-supabase":
+        from benchmark.scripts.sync_supabase import main as sync_supabase_main
+
+        argv = [
+            "--db",
+            str(args.db),
+            "--leaderboard",
+            str(args.leaderboard),
+            "--batch-size",
+            str(args.batch_size),
+        ]
+        if args.dry_run:
+            argv.append("--dry-run")
+        if args.include_uci:
+            argv.append("--include-uci")
+        return sync_supabase_main(argv)
     raise ValueError(f"unknown command: {args.command}")
 
 

@@ -367,6 +367,10 @@ p {
   transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
 }
 
+.leaderboard-row.professional {
+  grid-template-columns: 34px minmax(190px, 1fr) 76px minmax(210px, 1.05fr);
+}
+
 .leaderboard-row:hover {
   transform: translateX(3px);
   border-color: rgba(112, 230, 164, 0.34);
@@ -403,6 +407,54 @@ p {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
   text-align: right;
+}
+
+.leaderboard-record {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.leaderboard-record strong {
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.full-leaderboard-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid rgba(112, 230, 164, 0.28);
+  border-radius: 8px;
+  background: rgba(112, 230, 164, 0.08);
+  color: var(--green);
+  font-weight: 850;
+}
+
+.setup-notice,
+.table-skeleton {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid rgba(243, 211, 107, 0.28);
+  border-radius: 8px;
+  background: rgba(243, 211, 107, 0.08);
+  color: #f8e7a0;
+  line-height: 1.5;
+}
+
+.setup-notice.large {
+  margin-top: 22px;
+  font-size: 1rem;
+}
+
+.setup-notice.error {
+  border-color: rgba(255, 122, 122, 0.32);
+  background: rgba(255, 122, 122, 0.09);
+  color: #ffd5d5;
 }
 
 .model-mark {
@@ -523,6 +575,12 @@ p {
   color: var(--muted);
   font-size: 0.82rem;
   text-transform: uppercase;
+}
+
+.signal-card > strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.25rem;
 }
 
 .signal-card strong {
@@ -744,6 +802,94 @@ p {
   font-size: 1.18rem;
 }
 
+.method-hero.focused {
+  grid-template-columns: minmax(0, 860px);
+}
+
+.prompt-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(20, 23, 27, 0.88), rgba(9, 10, 12, 0.88));
+}
+
+.prompt-panel h2 {
+  margin-top: 8px;
+  font-size: 1.8rem;
+}
+
+.prompt-panel p {
+  margin-top: 12px;
+  color: #c4c9d3;
+  line-height: 1.62;
+}
+
+.prompt-panel pre {
+  min-width: 0;
+  margin: 0;
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  color: #dfe7f1;
+  white-space: pre-wrap;
+}
+
+.leaderboard-page {
+  padding-top: 52px;
+  padding-bottom: 72px;
+}
+
+.table-hero {
+  max-width: 860px;
+  margin-bottom: 22px;
+}
+
+.table-hero h1 {
+  margin-top: 6px;
+  font-size: 3.4rem;
+  line-height: 1;
+}
+
+.table-hero p {
+  margin-top: 12px;
+  color: #c4c9d3;
+  line-height: 1.62;
+}
+
+.leaderboard-table {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(17, 19, 22, 0.88);
+}
+
+.leaderboard-table-head,
+.leaderboard-table-row {
+  display: grid;
+  grid-template-columns: 64px minmax(230px, 1.1fr) 90px minmax(170px, 0.9fr) 90px minmax(190px, 1fr) 120px;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.leaderboard-table-head {
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.leaderboard-table-row small {
+  display: block;
+  color: var(--muted);
+}
+
 .schema-callout {
   display: flex;
   align-items: center;
@@ -796,6 +942,12 @@ p {
   grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
   gap: 18px;
   align-items: flex-start;
+}
+
+.games-layout.expanded {
+  grid-template-columns: minmax(380px, 470px) minmax(0, 1fr);
+  width: min(100vw - 40px, 1640px);
+  margin-inline: calc((min(100% - 40px, 1240px) - min(100vw - 40px, 1640px)) / 2);
 }
 
 .games-list-panel {
@@ -1113,10 +1265,16 @@ p {
 
 .transport-bar {
   display: grid;
-  grid-template-columns: repeat(6, 42px) minmax(0, 1fr);
+  grid-template-columns: repeat(6, 42px);
   gap: 8px;
   align-items: center;
   padding: 10px;
+}
+
+.replay-loading-inline {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .transport-bar button {
@@ -1141,10 +1299,12 @@ p {
 }
 
 .move-slider {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   gap: 10px;
   min-width: 0;
+  padding-top: 4px;
 }
 
 .move-slider input {

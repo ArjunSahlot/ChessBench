@@ -17,14 +17,14 @@ DEFAULT_DB = ROOT / "results" / "competition.sqlite3"
 DEFAULT_LEADERBOARD = ROOT / "results" / "elo_leaderboard.json"
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Sync ChessBench SQLite results to Supabase.")
     parser.add_argument("--db", type=Path, default=DEFAULT_DB)
     parser.add_argument("--leaderboard", type=Path, default=DEFAULT_LEADERBOARD)
     parser.add_argument("--batch-size", type=int, default=int(os.getenv("CHESSBENCH_BATCH_SIZE", "500")))
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--include-uci", action="store_true", help="Sync raw UCI event lines. This can be large.")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     supabase_url = os.getenv("SUPABASE_URL", "").rstrip("/")
     service_key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
@@ -48,6 +48,7 @@ def main() -> None:
             sync_leaderboard(args.leaderboard, client, args.batch_size)
     finally:
         db.close()
+    return 0
 
 
 class SupabaseRestClient:
@@ -307,4 +308,4 @@ def infer_provider(provider_model: str | None) -> str:
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
