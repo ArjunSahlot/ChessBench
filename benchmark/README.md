@@ -11,8 +11,12 @@ npm install
 npm run dev
 ```
 
-The site does not bundle local result data. Set the public Supabase variables to
-see live benchmark data in development:
+The landing page and `/leaderboard` use a tiny static snapshot generated from
+`results/elo_leaderboard.json` and `results/competition.sqlite3`. The full game
+archive and replay views still require Supabase because they are too large to
+bundle into the deployed site.
+
+Set the public Supabase variables to exercise the games archive in development:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=...
@@ -27,7 +31,14 @@ npm run build
 ```
 
 The app uses `output: "export"` and writes the deployable static site to
-`benchmark/out`.
+`benchmark/out`. `npm run build` refreshes the static landing snapshot before
+the Next.js export.
+
+To refresh that snapshot directly:
+
+```bash
+uv run llm-chess export-landing-snapshot
+```
 
 ## Supabase sync
 
@@ -40,7 +51,7 @@ uv run llm-chess sync-supabase --dry-run
 uv run llm-chess sync-supabase
 ```
 
-The public app reads from Supabase when `NEXT_PUBLIC_SUPABASE_URL` and
+The public game archive reads from Supabase when `NEXT_PUBLIC_SUPABASE_URL` and
 `NEXT_PUBLIC_SUPABASE_ANON_KEY` are present at build time. Without those values,
 data-heavy pages intentionally show a setup notice instead of falling back to
-local files.
+local game files.

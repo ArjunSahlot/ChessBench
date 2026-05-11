@@ -69,6 +69,11 @@ def build_parser() -> argparse.ArgumentParser:
     sync_supabase.add_argument("--batch-size", type=int, default=500)
     sync_supabase.add_argument("--dry-run", action="store_true")
     sync_supabase.add_argument("--include-uci", action="store_true", help="Also sync raw UCI event lines.")
+
+    landing_snapshot = subparsers.add_parser("export-landing-snapshot", help="Export the small static benchmark landing snapshot.")
+    landing_snapshot.add_argument("--db", type=Path, default=Path("results/competition.sqlite3"))
+    landing_snapshot.add_argument("--leaderboard", type=Path, default=Path("results/elo_leaderboard.json"))
+    landing_snapshot.add_argument("--output", type=Path, default=Path("benchmark/src/core/landing-data.json"))
     return parser
 
 
@@ -141,6 +146,12 @@ def main() -> int:
         if args.include_uci:
             argv.append("--include-uci")
         return sync_supabase_main(argv)
+    if args.command == "export-landing-snapshot":
+        from benchmark.scripts.export_landing_snapshot import main as export_landing_snapshot_main
+
+        return export_landing_snapshot_main(
+            ["--db", str(args.db), "--leaderboard", str(args.leaderboard), "--output", str(args.output)]
+        )
     raise ValueError(f"unknown command: {args.command}")
 
 

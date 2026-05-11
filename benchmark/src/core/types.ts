@@ -36,6 +36,12 @@ export type BenchmarkSummary = {
   moves: number;
 };
 
+export type LandingSnapshot = {
+  generated_at: string;
+  summary: BenchmarkSummary;
+  leaderboard: LeaderboardRow[];
+};
+
 export type GameSummary = {
   game_id: string;
   white_engine_id: string;
