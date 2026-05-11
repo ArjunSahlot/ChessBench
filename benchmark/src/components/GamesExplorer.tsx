@@ -116,13 +116,12 @@ export function GamesExplorer() {
         <div className="games-toolbar">
           <div>
             <p className="eyebrow">Game archive</p>
-            <h1>Supabase required</h1>
+            <h1>Archive unavailable</h1>
           </div>
         </div>
         <div className="setup-notice large">
-          This page intentionally has no bundled local game data. Create the Supabase project, run
-          `benchmark/supabase/schema.sql`, sync with `uv run llm-chess sync-supabase`, and set the public Supabase env
-          vars to enable the archive.
+          <Shield size={24} style={{ marginBottom: "1rem", color: "var(--brand)" }} />
+          <p>The detailed game archive requires a database connection, which is not currently configured for this deployment.</p>
         </div>
       </section>
     );
@@ -136,9 +135,6 @@ export function GamesExplorer() {
           <h1>{formatInteger(total)} games</h1>
         </div>
         <div className="toolbar-actions">
-          <span className="source-pill">
-            <Shield size={15} /> Supabase API
-          </span>
           <button className="icon-text-button" onClick={clearFilters}>
             <X size={16} /> Clear filters
           </button>

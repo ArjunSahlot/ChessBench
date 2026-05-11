@@ -23,11 +23,10 @@ export default function HomePage() {
           <div className="hero-board" aria-hidden="true" />
           <div className="hero-content page-pad">
             <div className="hero-copy">
-              <p className="eyebrow">LLM chess engine benchmark</p>
-              <h1>ChessBench</h1>
+              <h1>Chess<span className="brand-bench">Bench</span></h1>
               <p className="hero-lede">
-                Language models are asked to write complete C++ UCI chess engines, then those generated engines play
-                each other under the same tournament harness.
+                Language models are asked to write complete C++ UCI chess engines in a standardized agentic harness,
+                then the generated engines play each other to climb the ELO leaderboard.
               </p>
               <div className="hero-actions">
                 <Link className="primary-action" href="/leaderboard/">
@@ -38,16 +37,15 @@ export default function HomePage() {
                 </Link>
               </div>
               <div className="hero-stats llm-stats">
-                <Metric icon={<BrainCircuit />} label="Ply count" value={formatInteger(summary.moves)} />
-                <Metric icon={<Swords />} label="Finished games" value={formatInteger(summary.finished_games)} />
                 <Metric icon={<Code2 />} label="Generated engines" value={formatInteger(summary.generated_engines)} />
+                <Metric icon={<Swords />} label="Finished games" value={formatInteger(summary.finished_games)} />
+                <Metric icon={<BrainCircuit />} label="Ply count" value={formatInteger(summary.moves)} />
               </div>
             </div>
 
             <div className="leaderboard-panel" aria-label="ChessBench ELO leaderboard">
               <div className="panel-title-row">
                 <div>
-                  <p className="eyebrow">Main leaderboard</p>
                   <h2>ELO standings</h2>
                 </div>
                 <span className="freshness">
@@ -79,8 +77,7 @@ export default function HomePage() {
         <section className="section-band page-pad">
           <div className="section-heading-row">
             <div>
-              <p className="eyebrow">What ChessBench measures</p>
-              <h2>Can a model build a stronger chess engine?</h2>
+              <h2>What ChessBench measures</h2>
             </div>
             <Link className="text-link" href="/methodology/">
               Read methodology <ArrowRight size={16} />
@@ -89,18 +86,18 @@ export default function HomePage() {
           <div className="signal-grid">
             <SignalCard
               icon={<BrainCircuit />}
-              title="Engine-building skill"
-              body="Models must turn a prompt, tool calls, and limited iteration budget into a working C++ UCI engine."
+              title="Autonomous Efficiency"
+              body="Operating with capped iteration limits, models must strategically leverage compiler feedback and make decisive edits to construct a functional engine before running out of cycles."
             />
             <SignalCard
               icon={<Code2 />}
-              title="Implementation quality"
-              body="Generated engines need legal move generation, search, evaluation, time management, and a Makefile that compiles."
+              title="Uncompromising Precision"
+              body="The simulation is merciless to logical flaws. A single mistake in move generation or board state handling leads straight to an illegal move and a large hit to hard-earned ELO."
             />
             <SignalCard
               icon={<Trophy />}
-              title="Over-the-board strength"
-              body="The final score is earned in games, not judged from code style or self-reported capability."
+              title="Algorithmic Dominance"
+              body="Simply knowing the rules isn't enough to win. Champions are crowned by their ability to successfully weave together complex search heuristics and deep performance enhancements."
             />
           </div>
         </section>

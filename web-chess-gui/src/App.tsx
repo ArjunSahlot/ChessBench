@@ -269,9 +269,13 @@ function App() {
     return (
       <main className="empty-state">
         <BadgeAlert size={40} />
-        <h1>Competition export missing</h1>
-        <p>Run `npm run export:data` from `web-chess-gui`, then start the dev server again.</p>
-        <code>{loadError}</code>
+        <h1>Unable to load competition data</h1>
+        <p>The leaderboard data could not be found or loaded.</p>
+        <p>If you are running this locally, you may need to export the data first. Run <code>npm run export:data</code> from the <code>web-chess-gui</code> folder, then restart the server.</p>
+        <div className="error-details">
+          <p className="eyebrow">Technical details:</p>
+          <code>{loadError}</code>
+        </div>
       </main>
     );
   }
@@ -288,9 +292,12 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <div>
-          <p className="eyebrow">LLM Chess Engines</p>
-          <h1>Round Robin Arena</h1>
+        <div className="brand-lockup">
+          <img src="/assets/logo.png" alt="ChessBench Logo" width={32} height={32} style={{ imageRendering: "pixelated" }} />
+          <div>
+            <p className="eyebrow">LLM Chess Engines</p>
+            <h1>Round Robin Arena</h1>
+          </div>
         </div>
         <div className="summary-strip">
           <Stat icon={<Swords />} label="Games" value={data.summary.games.toLocaleString()} />

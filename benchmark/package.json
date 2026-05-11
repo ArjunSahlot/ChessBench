@@ -5,14 +5,15 @@
   "description": "Public benchmark site for ChessBench ELO results and games.",
   "type": "module",
   "scripts": {
-    "export:landing": "python3 scripts/export_landing_snapshot.py",
     "dev": "next dev --hostname 0.0.0.0",
     "build": "next build",
     "lint": "next lint"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.39.8",
+    "@vercel/analytics": "^2.0.1",
     "chess.js": "^1.4.0",
+    "dotenv": "^17.4.2",
     "lucide-react": "^1.14.0",
     "next": "^15.5.6",
     "react": "^19.2.6",

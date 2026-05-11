@@ -23,6 +23,10 @@
   color: var(--text);
 }
 
+.brand-bench {
+  color: var(--green);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -105,6 +109,7 @@ p {
   gap: 9px;
   padding: 6px 10px 6px 7px;
   font-weight: 850;
+  font-size: 1.18rem;
 }
 
 .brand-icon,
@@ -117,9 +122,8 @@ p {
 }
 
 .brand-icon {
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--line-strong);
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   background: linear-gradient(145deg, rgba(112, 230, 164, 0.16), rgba(255, 255, 255, 0.04));
   color: var(--green);
@@ -134,7 +138,6 @@ p {
 .secondary-action,
 .icon-text-button,
 .text-link {
-  border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.035);
   color: var(--muted);
@@ -158,9 +161,18 @@ p {
 .nav-play {
   width: 38px;
   height: 38px;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: 8px;
   color: var(--muted);
+  transition: border 160ms ease;
+}
+
+.nav-github:hover {
+  border: 1px solid;
+}
+
+.nav-play:hover {
+  border: 1px solid;
 }
 
 .nav-play {
@@ -672,7 +684,7 @@ p {
 .signal-card strong {
   display: block;
   margin-top: 4px;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
 }
 
 .signal-card p,
@@ -1026,6 +1038,7 @@ p {
 
 .icon-text-button {
   min-height: 38px;
+  border-color: rgba(0, 0, 0, 0.26);
 }
 
 .games-layout {

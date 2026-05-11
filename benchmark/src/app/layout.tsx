@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   description: "ELO benchmark for LLM-generated chess engines.",
   openGraph: {
     title: "ChessBench",
-    description: "A public ELO benchmark for LLM-generated chess engines.",
+    description: "A open-source ELO benchmark for LLM-generated chess engines.",
     type: "website",
   },
 };
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
+      <Analytics />
     </html>
   );
 }

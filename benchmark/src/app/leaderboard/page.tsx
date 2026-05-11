@@ -16,7 +16,7 @@ export default function LeaderboardPage() {
       <main className="leaderboard-page page-pad">
         <section className="table-hero">
           <p className="eyebrow">Full ELO leaderboard</p>
-          <h1>ChessBench standings</h1>
+          <h1>Chess<span className="brand-bench">Bench</span> standings</h1>
           <p>
             Ratings are computed from generated-engine games. Stockfish and internal reference engines may appear as
             calibration or sanity-check entries, but the benchmark is about LLM-created engines.

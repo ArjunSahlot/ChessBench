@@ -10,7 +10,7 @@ export default function MethodologyPage() {
         <section className="method-hero focused">
           <div>
             <p className="eyebrow">Benchmark methodology</p>
-            <h1>How ChessBench evaluates model-built engines</h1>
+            <h1>How Chess<span className="brand-bench">Bench</span> evaluates model-built engines</h1>
             <p>
               Each model is evaluated as an autonomous coding agent. It receives the same chess-engine objective, the
               same tool interface, and the same turn budget, then its compiled engine is tested through actual games.
@@ -30,14 +30,17 @@ export default function MethodologyPage() {
           </div>
           <pre>{`Build the strongest chess engine you can.
 
-Requirements:
-- C++ engine
-- UCI protocol
-- Compiles with make
-- Handles uci, isready, ucinewgame, position, go, quit
-- Uses time controls
+The only requirements are that the engine is written in C++, uses the UCI protocol, and compiles successfully using \`make\` in the current run directory.
 
-Goal: create the highest ELO chess engine possible.`}</pre>
+Use the provided tools to read and write files and compile code. Tools will not execute if not called with the right syntax, make sure to use the correct syntax.
+
+Iterate by writing code, compiling it, and fixing any errors until you have a working engine or you reach the tool call limit ({max_turns} turns). Make sure your code compiles before you lose access to tools.
+
+Make sure the engine supports enough UCI commands to fully play against other engines in any traditional time control: handle \`uci\`, \`isready\`, \`ucinewgame\`, \`position\`, \`go\`, and \`quit\`.
+
+Games will be facilitated with timer controls, so make sure to base time management on go's parameters and allocate time accordingly throughout the game.
+
+Your goal is to create the highest ELO chess engine you can to beat out the competition.`}</pre>
         </section>
 
         <section className="method-grid">

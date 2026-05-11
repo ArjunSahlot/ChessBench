@@ -1,17 +1,16 @@
 import Link from "next/link";
-import { GitBranch, Grid3X3, Play } from "lucide-react";
+import { GitBranch, Play } from "lucide-react";
+import Image from "next/image";
 
 export function SiteNav() {
   return (
     <header className="site-nav page-pad">
       <Link className="brand-lockup" href="/">
-        <span className="brand-icon">
-          <Grid3X3 size={18} />
-        </span>
-        <span>ChessBench</span>
+        <Image src="/assets/logo.png" alt="ChessBench Logo" width={40} height={40} className="pixelated" unoptimized/>
+        <span>Chess<span className="brand-bench">Bench</span></span>
       </Link>
       <nav aria-label="Primary">
-        <Link href="/">Leaderboard</Link>
+        <Link href="/leaderboard/">Leaderboard</Link>
         <Link href="/methodology/">Methodology</Link>
         <Link href="/games/">Games</Link>
       </nav>
