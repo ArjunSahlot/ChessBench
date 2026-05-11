@@ -1,7 +1,3 @@
--- ChessBench public benchmark schema for Supabase.
--- Run this once in the SQL editor, then sync data with:
---   cd benchmark && npm run sync:supabase
-
 create extension if not exists pg_trgm;
 
 create table if not exists public.chessbench_engines (
